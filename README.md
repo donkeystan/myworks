@@ -6,7 +6,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ## 1. C
 
-#### [ Work Build : Garment Measurement Record Tool ]
+#### [ Build #1 : Garment Measurement Record Tool ]
 
 - To Compile this program
 
@@ -23,7 +23,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Grid Puzzle ]
+#### [ Build #2 : Grid Puzzle ]
 - Compile this program
 
   ```powershell
@@ -43,7 +43,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ### I. Parser
 
-#### [ Work Build : Inventory Generator ]
+#### [ Build #3 : Inventory Generator ]
 
 - To run this script, go to the designated directory 
 
@@ -64,7 +64,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Inventory History Generator ]
+#### [ Build #4 : Inventory History Generator ]
 
 - To run this script, go to the designated directory 
 
@@ -90,7 +90,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Purchase Order Splitter ]
+#### [ Build #5 : Purchase Order Splitter ]
 
 - To run this script, go to the designated directory 
 
@@ -118,7 +118,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ### II. Framework - Django
 
-#### [ Work Build : Uniform Measurement System ]
+#### [ Build #6 : Uniform Measurement System ]
 
 - To run this system, go to the designated directory
 
@@ -148,7 +148,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : ToDo List ]
+#### [ Build #7 : ToDo List ]
 
 - To run this system, go to the designated directory
 
@@ -172,7 +172,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Notes ]
+#### [ Build #8 : Notes ]
 
 - To run this system, go to the designated directory
 
@@ -206,7 +206,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ### III. Data Analysis
 
-#### [ Work Build : NASA Near Earth Object Analysis ]
+#### [ Build #9: NASA Near Earth Object Analysis ]
 
 - To see the Data Analysis, go to the directory
 
@@ -230,7 +230,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ### [ Exhibition : Boundary Cap Holes ](https://piecetw.com/2022/09/19/boundary/?fbclid=IwAR1qgHL6bP7_Ffn5VePIJmDYM6bjwSLeaeklIdoFaxEpS_UjNNgStj7IbJ0)
 
-#### [ Work Build : Hand Control Version ]
+#### [ Build #10 : Hand Control Version ]
 
 - To run this web page, just go to the diretory
 
@@ -258,7 +258,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
   
   
 
-#### [ Work Build : W/O Hand Control Version ]
+#### [ Build #11 : W/O Hand Control Version ]
 
 - To run this web page, just go to the diretory
 
@@ -278,7 +278,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Uniform Measurement Page ]
+#### [ Build #12 : Uniform Measurement Page ]
 
 - To run this web page, just go to the diretory
 
@@ -298,7 +298,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ## 4. Excel VBA Macro
 
-#### [ Work Build : Inventory Generator ]
+#### [ Build #13 : Inventory Generator ]
 
 - To run the Excel macro, go to the directory
 
@@ -318,7 +318,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 
 
-#### [ Work Build : Sales Record Generator ]
+#### [ Build #14 : Sales Record Generator ]
 
 - To run the Excel macro, go to the directory
 
@@ -341,7 +341,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ## 5. 3D Works
 
-#### [ Work Build : ProE ]
+#### [ Build #15 : ProE ]
 
 - TV WALL MOUNT 01
 
@@ -358,7 +358,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ​				
 
-#### [ Work Build : Keyshot ]
+#### [ Build #16 : Keyshot ]
 
 - TV Wall Mount 32-55
 
