@@ -1,0 +1,48 @@
+.main
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    
+    /* <--- Alignment Setting --->*/
+    margin-top: 50px;
+    margin-left: 80px;
+
+    /* <--- Border Setting --->*/
+    border: solid red 5px;
+
+    font-size: 40px;
+
+    /* background-color: yellow; */
+}
+
+.main table
+{
+    /* <--- Border Setting --->*/
+    border: solid yellow 2px;
+    margin-left: 20px;
+}
+
+.main th
+{
+     /* <--- Border Setting --->*/
+    border: solid green 2px;
+    width: 200px;
+    font-size: 40px;
+}
+
+.main td
+{
+     /* <--- Border Setting --->*/
+    border: solid cyan 2px;
+    width: 50px;
+    font-size: 30px;
+}
+
+.footer
+{
+    border: solid pink 20px;
+    font-size: 50px;
+}

@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+*
+{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    
+    /* <--- Alignment Setting --->*/
+    margin-top: 20px;
+    margin-left: 80px;
+
+    /* <--- Border Setting --->*/
+    border: solid black 1px;
+
+    /* background-color: yellow; */
+}
+
+/*<------------------------------ Input General Setting ------------------------------>*/
+.block_input
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    min-height: 600px;
+
+    /* <--- Border Setting --->*/
+    border: solid black 1px;
+}
+
+.block_input tr
+{
+    /* <--- Dimension Setting --->*/
+    height: 30px;
+}
+
+.block_input td
+{
+    /* <--- Border Setting --->*/
+    border: dotted gray 1px;
+}
+
+/* <---------------- Form Basic Info ---------------->*/
+.block_input .form_basic
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+    
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+
+    /* <--- Border Setting --->*/
+    border-bottom: dotted black 2px;
+    
+    /* <--- Alignment Setting --->*/
+}
+
+.block_input .form_basic .container
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+    
+    /* <--- Dimension Setting --->*/
+    width: 360px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+
+    /* <--- Alignment Setting --->*/    
+    margin-left: 80px;
+    margin-bottom: 10px;
+}
+
+.block_input .form_basic .container table
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+}
+
+.block_input .form_basic .form_basic_btn
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+
+    /* <--- Dimension Setting --->*/
+    width: 150px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+    
+    /* <--- Alignment Setting --->*/
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 110px;
+}
+
+.block_input .form_basic .form_basic_btn input
+{
+    /* <--- Display Setting --->*/
+    display: block;
+    
+    /* <--- Dimension Setting --->*/
+    width: 150px;
+    height: 50px;
+
+    /* <--- Alignment Setting --->*/
+
+    cursor: pointer;
+}
+
+.block_input .form_basic input
+{
+    height: 20px;
+}
+
+/* <---------------- Form Up ---------------->*/
+.block_input .form_up
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+    
+    /* <--- Dimension Setting --->*/
+    width: 360px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+    
+    /* <--- Alignment Setting --->*/
+    margin-left: 80px;
+}
+
+.block_input .form_up input
+{
+    height: 20px;
+}
+
+/* <---------------- Form Down ---------------->*/
+.block_input .form_down
+{
+    /* <--- Display Setting --->*/
+    display: inline-block;
+
+    /* <--- Dimension Setting --->*/
+    width: 360px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+    
+    /* <--- Alignment Setting --->*/   
+}
+
+.block_input .form_down input
+{
+    height: 20px;
+}
+
+/* <---------------- Form Instrunction ---------------->*/
+.block_input .form_remark
+{
+    /* <--- Display Setting --->*/
+    display: block;
+    float: right;
+
+    /* <--- Dimension Setting --->*/
+    height: 460px;
+    width: 430px;
+    line-height: 30px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+    
+    /* <--- Alignment Setting --->*/
+    margin-right: 35px;
+}
+
+/* <---------------- Button ---------------->*/
+.block_input .form_btn
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+
+    /* <--- Border Setting --->*/
+    /* border: dotted black 2px; */
+    
+    /* <--- Alignment Setting --->*/
+    margin-top: 20px;
+}
+
+.block_input .form_btn input
+{
+    /* <--- Dimension Setting --->*/
+    width: 150px;
+    height: 50px;
+
+    /* <--- Alignment Setting --->*/
+    margin-left: 200px;
+
+    cursor: pointer;
+}
+
+
+/*<------------------------------ Display Section ------------------------------>*/
+.block_output
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    min-height: 300px;
+
+    /* <--- Border Setting --->*/
+    border: solid black 1px;
+}
+
+.block_output table
+{
+    width: 100%;
+}
+
+.block_output tr
+{
+    height: 8px;
+}
+
+.block_output tr th
+{
+    border: dotted black 1px;
+    text-align: center;
+    font-size: 8pt;
+    height: 10px;
+}
+
+.block_output tr td
+{
+    border: dotted black 1px;
+    text-align: center;
+    font-size: 8pt;
+    height: 10px;
+}
+
+.block_output tr td button
+{
+    cursor: pointer;
+}
+
+.block_output tr td input
+{
+    margin-left: 5px;
+}
+
+/*<------------------------------ Header ------------------------------>*/
+.block_header
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    height: 50px;
+    
+    /* <--- Border Setting --->*/
+    border: solid black 1px;
+    
+}
+
+.block_header .header
+{
+    /* <--- Font Setting --->*/
+    font-size: 10pt;
+
+    /* <--- Alignment Setting --->*/
+    text-align: center;
+    line-height: 3px;
+}
+
+
+/*<------------------------------ Footer ------------------------------>*/
+.block_footer
+{
+    /* <--- Display Setting --->*/
+    display: block;
+
+    /* <--- Dimension Setting --->*/
+    width: 1280px;
+    height: 50px;
+
+    /* <--- Border Setting --->*/
+    border: solid black 1px;
+}
+
+.block_footer .footer
+{
+    /* <--- Font Setting --->*/
+    font-size: 10pt;
+
+    /* <--- Alignment Setting --->*/
+    text-align: center;
+    line-height: 12px;
+}

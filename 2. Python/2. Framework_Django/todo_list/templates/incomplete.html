@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>標示未完成</title>{% endblock %}
+{% block content %}
+	<h1> 標示未完成 </h1>
+	<form action="." method="POST" name="form1">
+		
+        {% csrf_token %}
+		
+        <div>
+            標示未完成：<input type="radio" name="complete" id="complete_false" value="False" checked="checked"/> 未完成
+		</div>
+
+		<div>
+		    <input type="submit" name="button_incomplete" id="button_incomplete" value="標示未完成" />
+		</div>
+
+		<span style="color:red"> {{message}} </span>
+
+	</form>
+{% endblock %}

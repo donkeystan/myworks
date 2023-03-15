@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main_styles.css" type="text/css" >
+    <title> MAIN PAGE CSS TEST </title>
+</head>
+<body>
+    <div class="main">
+        <div class="option-table">
+            <h1> HF_UNIFORM 主頁面 </h1>
+            <h2> 選項 </h2>
+            <table>
+                <form action="." method="POST" name="button_multi_input">
+                    <tr class="multi-input-rows">
+                        <th>
+                            請輸入客戶名：
+                        </th>
+                        <td>
+                                <!-- {% csrf_token %} -->
+                                <input type="text" name="cust_name" id="cust_name"/>
+                        </td>
+                        <td>
+                            <input type="submit" name="button_multi_input" id="button_multi_input" value="建立批量制服量測單">
+                        </td>
+
+                    </tr>
+                </form>
+                <tr>
+                    <th>
+                    </th>
+                    <td>
+                        <form action="/single_input">
+                            <input type="submit" value="建立單筆制服量測單" />
+                        </form>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>
+                    
+                    </th>
+                    <td>
+                        <form action="/query">
+                            <input type="submit" value="查詢制服量測單" />
+                        </form>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>
+                        
+                    </th>
+                    <td>
+                        <form action=".">
+                            <input type="submit" value="工單製作中心" />
+                        </form>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>
+                        系統訊息：
+                    </th>
+                    <td>
+                        <span> {{ message }} </span>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>
+                        登出系統：
+                    </th>
+                    <td>
+                        <form action="/logout">
+                            <input type="submit" value="登出" />
+                        </form>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

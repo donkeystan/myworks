@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Mono',monospace;
+}
+
+.main
+{
+    display: block;
+    width: 1600px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    border: solid gray 5px;
+    border-radius: 5px;
+}
+
+.main h1, h2
+{
+    text-align: center;
+    font-size: 16px;
+}
+
+.main h2
+{
+    text-align: left;
+    font-size: 14px;
+}
+
+/* <---------- Option Table Settings ---------->*/
+.option-table
+{
+    width: 30%;
+    border: solid gray 1px;
+}
+
+.option-table table
+{
+    width: 100%;
+    border: dotted gray 2px;
+}
+
+.option-table td
+{
+    width: 50%;
+}
+
+.option-table input
+{
+    width: 100%;
+    height: 30px;
+}
+
+
+/* <---------- Input Settings ---------->*/
+.listing-input
+{
+    width: 100%;
+    border: solid gray 1px;
+    height: 390px;
+}
+
+.listing-input table 
+{
+    word-wrap: break-word; 
+    margin-top: 5px;
+    width: 100%;
+    border: solid gray 1px;
+}
+
+.table-head
+{
+    background-color: darkcyan;
+    text-align: center;
+}
+
+.listing-input-basic
+{
+    display: inline-block;
+    /* border: solid gray 1px; */
+    width: 32%;
+    margin-left: 5px;
+    height: 280px;
+}
+
+.listing-input-basic th
+{
+    word-wrap: break-word; 
+    border: dotted gray 0.5px;
+    font-size: 14px;
+    text-align: center;
+    width: 30%;
+}
+
+.listing-input-basic td
+{
+    word-wrap: break-word;
+    border: dotted gray 0.5px;
+    font-size: 12px;
+    width: 60%;
+}
+
+.listing-input-shirt
+{
+    display: inline-block;
+    /* border: solid gray 1px; */
+    width: 32%;
+    margin-left: 5px;
+    height: 280px;
+}
+
+.listing-input-shirt th
+{
+    word-wrap: break-word; 
+    border: dotted gray 0.5px;
+    font-size: 14px;
+    text-align: center;
+    width: 30%;
+}
+
+.listing-input-shirt td
+{
+    word-wrap: break-word;
+    border: dotted gray 0.5px;
+    font-size: 12px;
+    width: 60%;
+}
+
+.listing-input-pants
+{
+    display: inline-block;
+    /* border: solid gray 1px; */
+    width: 32%;
+    margin-left: 5px;
+    height: 280px;
+}
+
+.listing-input-pants th
+{
+    word-wrap: break-word; 
+    border: dotted gray 0.5px;
+    font-size: 14px;
+    text-align: center;
+    width: 30%;
+}
+
+.listing-input-pants td
+{
+    word-wrap: break-word;
+    border: dotted gray 0.5px;
+    font-size: 12px;
+    width: 60%;
+}
+
+.listing-input-remark
+{
+    display: block;
+    /* border: solid gray 1px; */
+    width: 98%;
+    margin-left: 5px;
+    height: 30px;
+}
+
+.listing-input-remark-table
+{
+    width: 100%;
+}
+
+.listing-input-remark-table th
+{
+    width: 10%;
+}
+
+.listing-input-remark-table td
+{
+    width: 50%;
+}
+
+#id_remark
+{
+    width: 50%;
+    /* height: 20px; */
+}
+
+.listing-input-button
+{
+    display: block;
+    /* border: solid gray 1px; */
+    margin-left: 5px;
+    margin-top: 15px;
+    width: 30%;
+    height: 30px;
+}
+
+.listing-input-button table
+{
+    width: 100%;
+}
+
+.llisting-input-button-table td
+{
+    width: 50%;
+}
+
+.button-amd input
+{
+    width: 100%;
+    height: 30px;
+}
+
+/* <---------- Listing Settings ---------->*/
+.listing-display
+{
+    word-wrap: break-word; 
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: solid gray 0.5px;
+}
+
+.listing-display table
+{
+    word-wrap: break-word; 
+    margin-top: 5px;
+    width: 100%;
+    border: dotted gray 0.5px;
+}
+
+.listing-display th
+{
+    display: inline-block;
+    word-wrap: break-word; 
+    border: dotted gray 0.5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.listing-display td
+{
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 10px;
+    height: 50px;
+    border: dotted gray 0.5px;
+}
+
+.listing-display-table-hover tr:hover
+{
+    transform: translateY(0.2vh);
+    background: lightgray;
+    box-shadow: 1px 1px gray;
+    transition: 0.5s;
+}
+
+.listing-display-table-show-no
+{
+    text-align: center;
+    width:2%;
+}
+
+.listing-display-table-show-name
+{
+    text-align: center;
+    width:6%;
+}
+
+.listing-display-table-show-reg
+{ 
+    text-align: left;
+    width:8%;
+}
+
+.listing-display-table-show-org
+{
+    text-align: left;
+    width:10%;
+}
+
+.listing-display-table-show-gender
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-phone
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-mail
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-addr
+{
+    text-align: center;
+    width:3%;
+}
+
+
+.listing-display-table-show-date
+{
+    text-align: left;
+    width:5%;
+}
+
+.listing-display-table-dim
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-remark
+{
+    width: 5%;
+}
+
+.listing-display-table-edit
+{
+    width: 2%;
+}
+
+.listing-display-table-delete
+{
+    width: 2%;
+}
+
+.listing-display-table-hover input
+{
+    height: 30px;
+}

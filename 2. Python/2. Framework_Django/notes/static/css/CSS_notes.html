@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" type="text/css" >
+        <title> CSS Notes </title>
+    </head>
+    <body>
+        <div class="main">
+            <h1> 隨手記 </h1>
+            <div class = "option-table">
+                <table>
+                    <tr>
+                        <td>
+                            <form action="/logout">
+                                <input type="submit" value="登出" />
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/archived">
+                                <input type="submit" value="查看封存" />
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+    
+            <div class="notes-input">
+                <h2> 建立隨手記 </h2>
+                <form action="." method="POST" name="form" id="form1">
+                    {% csrf_token %}
+                    <table>
+                        <tr class="notes-input-title-row">
+                            <th>標題</th>
+                            <td><input type="text" name="title" id="input_title" /></td>
+                        </tr>
+                        <tr class="notes-input-content-row">
+                            <th>內容</th>
+                            <td><input type="text" name="content" id="input_content" /></td>
+                        </tr>
+                        <tr class="notes-input-button-row">
+                            <th>選項</th>
+                            <td>
+                                <input type="submit" name="button_new" id="button_new" value="新增事項">
+                                <input type="reset" name="button_reset" id="button_reset" value="重    填">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <span> 系統訊息： {{message}} </span>
+            </div>
+    
+            <div class="show-notes">
+                <h2> {{ username }} 的隨手記 </h2>
+    
+                {% for note in notes %}
+                <div class = "notes-block">
+
+                    <table class="notes-block-hover">
+                        <tr class="notes-block-title-row">
+                            <th>標題</th>
+                            <td> {{ note.Title }} </td>
+                        </tr>
+                        <tr class="notes-block-content-row">
+                            <th>內容</th>
+                            <td> {{ note.Content }} </td>
+                        </tr>
+                    </table>
+
+                    <table class="notes-block-option">
+                        <tr>
+                            <th>選項</th>
+                            <td>
+                                <form action="/archiving/{{note.id}}/">
+                                    <input type="submit" value="封 存" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/edit/{{note.id}}/">
+                                    <input type="submit" value="修 改" />
+                                </form>
+                            </td>
+                            <td>
+                                <form action="/delete/{{note.id}}/">
+                                    <input type="submit" value="刪 除" />
+                                </form>
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                {% endfor %}
+                
+            </div>        
+        </div>
+    </body>
+</html>

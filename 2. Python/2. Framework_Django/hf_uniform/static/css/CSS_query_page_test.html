@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="query_styles.css" type="text/css" >
+    <title> QUERY PAGE CSS TEST </title>
+</head>
+<body>
+
+    <div class="main">
+        <h1> 查詢制服量測單 </h1>
+        
+        <div class="option-table">
+            <form action="/main">
+                <table>
+                    <tr>
+                        <td class="option-table-show-main">
+                            <span> 回主頁面 </span>
+                        </td>
+                        <td class="option-table-submit-main">
+                            <input type="submit" value="回主頁面" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div class="query-section">
+            
+            <form action="" method="POST" name="query">
+                {% csrf_token %}
+                <table class="table-query-input">
+                    <tr>
+                        <td class="query-title">
+                            <span>以姓名查詢 → 請輸入姓名：</span>
+                        </td>
+                        <td class="query-title">
+                            <input type="text" name="cust_name" id="cust_name"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="query-title">
+                            <span>以客戶/團體名名稱查詢→ 請輸入客戶/團體名：</span>
+                        </td>
+                        <td class="query-title">
+                            <input type="text" name="orgnization_name" id="orgnization_name"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="query-title">
+                            <span>以建單日期查詢→ 請輸入建單日期 YYYY-MM-DD ：</span>
+                        </td>
+                        <td class="query-title">
+                            <input type="date" name="date_of_created" id="date_of_created"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="button-submit-for-query">
+                            <input type="submit" name="button_query_option" id="button_query_option" value="查詢 ">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <table class="table-query-message"> 
+                <tr>
+                    <th><span>姓名：</span></th>
+                    <th><span>客戶/團體名：</span></th>
+                    <th><span>建單日期：</span></th>
+                    <th><span>系統訊息：</span></th>
+                </tr>
+                <tr>
+                    <td><span>{{cust_name}}</span></td>
+                    <td><span>{{orgnization_name}}</span></td>
+                    <td><span>{{date_of_created}}</span></td>
+                    <td><span>{{message}}</span></td>
+                </tr>
+            </table>
+
+        </div>
+        
+        <div class="listing-display">
+            <h2> 量測記錄如下： </h2>
+            <table class="listing-display-table">
+                <th class="listing-display-table-show-no">No.</th>
+                <th class="listing-display-table-show-name">姓名</th>
+                <th class="listing-display-table-show-reg">編號</th>
+                <th class="listing-display-table-show-org">團體/客戶</th>
+                <th class="listing-display-table-show-gender">性別</th>
+                <!-- <th class="listing-display-table-show-phone">電話</th> -->
+                <!-- <th class="listing-display-table-show-mail">E-mail</th> -->
+                <!-- <th class="listing-display-table-show-addr">地址</th> -->
+                <th class="listing-display-table-show-date">建單日期</th>
+                <th class="listing-display-table-dim">頭圍</th>
+                <th class="listing-display-table-dim">肩寬</th>
+                <th class="listing-display-table-dim">袖長</th>
+                <th class="listing-display-table-dim">背長</th>
+                <th class="listing-display-table-dim">背心長</th>
+                <th class="listing-display-table-dim">衣長</th>
+                <th class="listing-display-table-dim">領圍</th>
+                <th class="listing-display-table-dim">上圍</th>
+                <th class="listing-display-table-dim">腰圍</th>
+                <th class="listing-display-table-dim">下圍</th>
+                <th class="listing-display-table-dim">褲腰圍</th>
+                <th class="listing-display-table-dim">褲下圍</th>
+                <th class="listing-display-table-dim">褲襠</th>
+                <th class="listing-display-table-dim">前襠</th>
+                <th class="listing-display-table-dim">大腿</th>
+                <th class="listing-display-table-dim">褲長</th>
+                <th class="listing-display-table-dim">裙長</th>
+                <th class="listing-display-table-show-remark">備註</th>
+                <th class="listing-display-table-detail">明細</th>
+                <th class="listing-display-table-delete">刪除</th>
+            </table>
+
+            <table class="listing-display-table-hover">
+                {% for uniform in uniforms %}
+                    {% if forloop.counter < 200 %}
+                        <tr>
+                            <td class="listing-display-table-show-no"> {{ forloop.counter }}</td>
+                            <td class="listing-display-table-show-name"> {{ uniform.CustName }} </td>
+                            <td class="listing-display-table-show-reg"> {{ uniform.CustNo }} </td>
+                            <td class="listing-display-table-show-org"> {{ uniform.OrgnizationName }} </td>
+                            <td class="listing-display-table-show-gender"> {{ uniform.Gender }} </td>
+                            <!-- <td class="listing-display-table-show-phone"> {{ uniform.CustPhone }} </td> -->
+                            <!-- <td class="listing-display-table-show-mail"> {{ uniform.CustEmail }} </td> -->
+                            <!-- <td class="listing-display-table-show-addr"> {{ uniform.CustAddr }} </td> -->
+                            <td class="listing-display-table-show-date"> {{ uniform.DateOfCreated }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Hat }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.ShoulderWidth }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.SleeveLength }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.BackLength }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.CenterBack }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.ShirtLength }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Collar }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Chest }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Waist }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Seat }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.WaistBelt }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Hip }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Crotch }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.FrontCrotch }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.Thigh }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.PantsLength }} </td>
+                            <td class="listing-display-table-dim"> {{ uniform.SkirtLength }} </td>
+                            <td class="listing-display-table-show-remark"> {{ uniform.Remark }} </td>
+                            
+                            <td class="listing-display-table-detail">
+                                <form action="/detail/{{uniform.id}}">
+                                    <input type="submit" value="明細" />
+                                </form>
+                            </td>
+
+                            <td class="listing-display-table-delete">
+                                <form action="/delete_in_query/{{uniform.id}}">
+                                    <input type="submit" value="刪除" />
+                                </form>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

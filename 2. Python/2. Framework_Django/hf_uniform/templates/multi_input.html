@@ -1,0 +1,371 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 批量制服量測單 </title>
+
+    {% load static %} <link href="{% static "css\multi_input_styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+
+<div class="main">
+    <h1> 「{{ orgnization_name }}」批量制服量測單 </h1>
+
+    <div class="option-table">
+        <table class="option-table-button">
+            <tr>
+                <td>
+                    <form action="/main">
+                        <input type="submit" value="回主頁面" />
+                    </form>
+                </td>
+
+                <td>
+                    <form action="/query">
+                        <input type="submit" value="查詢量測單" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <table class="option-table-message">
+            <tr>
+                <th>
+                    <span> 系統訊息： </span>
+                </th>
+                <td>
+                    <span> {{ message }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="listing-input">
+        <h2> 基本資料及量測資料輸入： </h2>
+
+        <form action="." method="POST" name="uniform_form">
+            {% csrf_token %}
+
+            <div class="listing-input-basic">
+                <table class="listing-input-basic-table">
+                    <tr class="table-head">
+                        <th class="dim">
+                            <span> 基本資料：</span>
+                        </th>
+                        <td class="dim">
+                            <span> 內容： </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dim">姓名</th>
+                        <td>
+                            {{uniform_form.cust_name}}
+                        </td>    
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">編號</th>
+                        <td class="dim">
+                            {{uniform_form.cust_no}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">團體/客戶</th>
+                        <td class="dim">
+                            <input type="radio" name="orgnization_name" id="orgnization_name" value="{{ orgnization_name }}" checked="checked"/>{{ orgnization_name }}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">性別</th>
+                        <td class="dim">
+                            <input type="radio" name="gender" id="gender_m" value="M" checked="checked"/> 男
+                            <input type="radio" name="gender" id="gender_f" value="F" /> 女
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">電話</th>
+                        <td class="dim">
+                            {{uniform_form.cust_phone}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">E-mail</th>
+                        <td class="dim">
+                            {{uniform_form.cust_email}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">地址</th>
+                        <td class="dim">
+                            {{uniform_form.cust_addr}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">建單日期</th>
+                        <td class="dim">
+                            {{uniform_form.date_of_created}}
+                        </td>
+                    </tr>
+                </table> 
+            </div>
+            
+            <div class="listing-input-shirt">
+                <table class="listing-input-shirt-table">
+                    <tr  class="table-head">
+                        <th class="dim">
+                            <span> 上衣：</span>
+                        </th>
+                        <td class="dim">
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="dim">頭圍</th>
+                        <td class="dim">
+                            {{uniform_form.hat}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">肩寬</th>
+                        <td class="dim">
+                            {{uniform_form.shoulder_width}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">袖長</th>
+                        <td class="dim">
+                            {{uniform_form.sleeve_length}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">背長</th>
+                        <td class="dim">
+                            {{uniform_form.back_length}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">背心長</th>
+                        <td class="dim">
+                            {{uniform_form.center_back}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">衣長</th>
+                        <td class="dim">
+                            {{uniform_form.shirt_length}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">領圍</th>
+                        <td class="dim">
+                            {{uniform_form.collar}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">上圍</th>
+                        <td class="dim">
+                            {{uniform_form.chest}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">腰圍</th>
+                        <td class="dim">
+                            {{uniform_form.waist}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">下圍</th>
+                        <td class="dim">
+                            {{uniform_form.seat}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="listing-input-pants">
+                <table class="listing-input-pants-table">
+                    <tr  class="table-head">
+                        <th class="dim">
+                            <span> 褲/裙：</span>
+                        </th>
+                        <td class="dim">
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">褲腰圍</th>
+                        <td class="dim">
+                            {{uniform_form.waist_belt}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">褲下圍</th>
+                        <td class="dim">
+                            {{uniform_form.hip}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">褲襠</th>
+                        <td class="dim">
+                            {{uniform_form.crotch}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th class="dim">前襠</th>
+                        <td class="dim">
+                            {{uniform_form.front_crotch}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">大腿</th>
+                        <td class="dim">
+                            {{uniform_form.thigh}}
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">褲長</th>
+                        <td class="dim">
+                            {{uniform_form.pants_length}}                        
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <th class="dim">裙長</th>
+                        <td class="dim">
+                            {{uniform_form.skirt_length}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="listing-input-remark">
+                <table class="listing-input-remark-table">
+                    <tr>
+                        <th class="dim">備註</th>
+                        <td class="dim">
+                            {{uniform_form.remark}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="listing-input-button">
+                <table class="listing-input-button-table">
+                    <tr>
+                        <td class="button-amd">
+                            <input type="submit" name="button_submit" id="button_submit" value="儲存">
+                        </td>
+                        <td class="button-amd">
+                            <input type="reset" name="button_reset" id="button_reset" value="重填">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    <div class="listing-display">
+        <h2> 量測記錄如下： </h2>
+        <table class="listing-display-table">
+            <th class="listing-display-table-show-no">No.</th>
+            <th class="listing-display-table-show-name">姓名</th>
+            <th class="listing-display-table-show-reg">編號</th>
+            <th class="listing-display-table-show-org">團體/客戶</th>
+            <th class="listing-display-table-show-gender">性別</th>
+            {% comment %} <th class="listing-display-table-show-phone">電話</th>
+            <th class="listing-display-table-show-mail">E-mail</th>
+            <th class="listing-display-table-show-addr">地址</th> {% endcomment %}
+            <th class="listing-display-table-show-date">建單日期</th>
+            <th class="listing-display-table-dim">頭圍</th>
+            <th class="listing-display-table-dim">肩寬</th>
+            <th class="listing-display-table-dim">袖長</th>
+            <th class="listing-display-table-dim">背長</th>
+            <th class="listing-display-table-dim">背心長</th>
+            <th class="listing-display-table-dim">衣長</th>
+            <th class="listing-display-table-dim">領圍</th>
+            <th class="listing-display-table-dim">上圍</th>
+            <th class="listing-display-table-dim">腰圍</th>
+            <th class="listing-display-table-dim">下圍</th>
+            <th class="listing-display-table-dim">褲腰圍</th>
+            <th class="listing-display-table-dim">褲下圍</th>
+            <th class="listing-display-table-dim">褲襠</th>
+            <th class="listing-display-table-dim">前襠</th>
+            <th class="listing-display-table-dim">大腿</th>
+            <th class="listing-display-table-dim">褲長</th>
+            <th class="listing-display-table-dim">裙長</th>
+            <th class="listing-display-table-show-remark">備註</th>
+            <th class="listing-display-table-edit">修改</th>
+            <th class="listing-display-table-delete">刪除</th>
+        </table>
+
+        <table class="listing-display-table-hover">
+            {% for uniform in uniforms %}
+                <tr>
+                    <td class="listing-display-table-show-no"> {{ forloop.counter }}</td>
+                    <td class="listing-display-table-show-name"> {{ uniform.CustName }} </td>
+                    <td class="listing-display-table-show-reg"> {{ uniform.CustNo }} </td>
+                    <td class="listing-display-table-show-org"> {{ uniform.OrgnizationName }} </td>
+                    <td class="listing-display-table-show-gender"> {{ uniform.Gender }} </td>
+                    {% comment %} <td class="listing-display-table-show-phone"> {{ uniform.CustPhone }} </td>
+                    <td class="listing-display-table-show-mail"> {{ uniform.CustEmail }} </td>
+                    <td class="listing-display-table-show-addr"> {{ uniform.CustAddr }} </td> {% endcomment %}
+                    <td class="listing-display-table-show-date"> {{ uniform.DateOfCreated }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Hat }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.ShoulderWidth }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.SleeveLength }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.BackLength }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.CenterBack }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.ShirtLength }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Collar }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Chest }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Waist }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Seat }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.WaistBelt }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Hip }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Crotch }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.FrontCrotch }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.Thigh }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.PantsLength }} </td>
+                    <td class="listing-display-table-dim"> {{ uniform.SkirtLength }} </td>
+                    <td class="listing-display-table-show-remark"> {{ uniform.Remark }} </td>
+                    <td class="listing-display-table-edit">
+                        <form action="/edit_from_multi_input/{{uniform.id}}">
+                            <input type="submit" value="修改" />
+                        </form>
+                    </td>
+                    <td class="listing-display-table-delete">
+                        <form action="/delete_return_multi_input/{{uniform.id}}">
+                            <input type="submit" value="刪除" />
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+        
+    </div>
+</div>
+    
+{% endblock %}

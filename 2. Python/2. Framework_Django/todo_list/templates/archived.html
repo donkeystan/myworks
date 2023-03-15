@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 待辦事項 </title>
+
+    {% load static %} <link href="{% static "css/styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="main">
+        <div class="show_todo">
+            <table>
+                <tr>
+                    <td>
+                        <form action="/todo">
+                            <input type="submit" value="查看待辦事項" />
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+            <h2> 已封存事項 </h2>
+            <table>
+                <th class="show_no">編號</th>
+                <th class="show_title">標題</th>
+                <th class="show_content">內容</th>
+                <th class="show_complete">完成</th>
+                <th class="show_time">建立日期</th>
+                <th class="show_button">異動</th>
+            </table>
+
+            <table class="hover_content">
+                {% for task in tasks %}
+                    <tr>
+                        <td class="show_no"> {{ forloop.counter  }}</td>
+                        <td class="show_title"> {{ task.title }}</td>
+                        <td class="show_content"> {{ task.taskContent }}</td>
+
+                        <td class="show_complete">
+                            {% if task.complete == "True" %}
+                                <div> 已完成 </div>
+                            {% else %}
+                                <div> 未完成 </div>
+                            {% endif %}                         
+                        </td>
+
+                        <td class="show_time"> {{ task.dateOfCreated }}</td>
+                        <td class="show_button">
+                            <form action="/de_archiving/{{task.id}}/">
+                                <input type="submit" value="取消封存" />
+                            </form>
+                                                
+                            <form action="/delete/{{task.id}}/">
+                                <input type="submit" value="刪   除" />
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

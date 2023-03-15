@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 隨手記 </title>
+
+    {% load static %} <link href="{% static "css/styles_login.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1> 隨手記 </h1>
+        <div class = "login-input">
+            <table >
+                {% if request.user.is_authenticated %}
+                <h2> 哈囉 {{name}} 您已登入，請點選下列選項： </h2>
+                <tr>
+                    <td>    
+                        <form action="/logout">
+                            <input type="submit" value="登出" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="/notes">
+                            <input type="submit" value="查看隨手記" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="/archived">
+                            <input type="submit" value="查看封存" />
+                        </form>
+                    </td>
+                </tr>
+                {% else %}
+                <h2> 尚未登入，請點選登入進入隨手記 </h2>
+                <tr>
+                    <td>    
+                        <form action="/login">
+                            <input type="submit" value="登入" />
+                        </form>
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css" >
+    <script defer src="script.js" ></script>
+    <title> Measurement_List </title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="block_header">
+            <div class="header">
+                <h3>Measurement_List V 1.0</h3>
+                <h4>[ Project_HF001 ]</h4>
+            </div>
+        </div>
+
+        <div class="block_input">
+            <form id="form">
+                <div class="form_basic">
+                    <div class="container">
+                        <table>
+                            <tr><th><span>< 基本資料 ></span></th></tr>
+                            <tr>
+                                <td><label for="name">姓 名:</label></td>
+                                <td><input id="name" name="name" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td><label for="reg">編 號.:</label></td>
+                                <td><input id="reg" name="reg" type="text" size="30"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="form_basic_btn">
+                        <input type="reset" value="搜 尋 資 料" onclick="search()">
+                    </div>
+
+                </div>
+                <div class="form_up">
+                    <table>
+                        <tr><th><span>< 上 衣 ></span></th></tr>
+                        <tr>
+                            <td><label for="hat">頭 圍:</label></td>
+                            <td><input id="hat" name="hat" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="shoulder">肩 寬:</label></td>
+                            <td><input id="shoulder" name="shoulder" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="sleeve">袖 長:</label></td>
+                            <td><input id="sleeve" name="sleeve" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="back">背 長:</label></td>
+                            <td><input id="back" name="back" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="center_back">背心長:</label></td>
+                            <td><input id="center_back" name="center_back" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="up_length">衣 長:</label></td>
+                            <td><input id="up_length" name="up_length" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="collar">領 圍:</label></td>
+                            <td><input id="collar" name="collar" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="chest">上 圍:</label></td>
+                            <td><input id="chest" name="chest" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="up_waist">腰 圍:</label></td>
+                            <td><input id="up_waist" name="up_waist" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="up_bottom">下 圍:</label></td>
+                            <td><input id="up_bottom" name="up_bottom" type="text" size="30"></td>
+                        </tr>    
+                    </table>
+                </div>
+                <div class="form_down">
+                    <table>
+                        <tr><th><span>< 褲 / 裙 ></Down></span></th></tr>
+                        <tr>
+                            <td><label for="dw_waist">褲腰圍:</label></td>
+                            <td><input id="dw_waist" name="dw_waist" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="dw_bottom">褲下圍:</label></td>
+                            <td><input id="dw_bottom" name="dw_bottom" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="crotch">褲 襠:</label></td>
+                            <td><input id="crotch" name="crotch" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="ft_crotch">前 襠:</label></td>
+                            <td><input id="ft_crotch" name="ft_crotch" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="thigh">大 腿:</label></td>
+                            <td><input id="thigh" name="thigh" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="dw_len">褲 長:</label></td>
+                            <td><input id="dw_len" name="dw_len" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="skirt_len">裙 長:</label></td>
+                            <td><input id="skirt_len" name="skirt_len" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="remark">備 註:</label></td>
+                            <td><input id="remark" name="remark" type="text" size="30"></td>
+                        </tr>
+                        <tr>
+                            <td><span>< 預備欄 ></span></td>
+                            <td><span>< 預備欄 ></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>< 預備欄 ></span></td>
+                            <td><span>< 預備欄 ></span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="form_remark">
+                    <div class="content">
+                        <h3>操 作 說 明：</h3>
+                        <ul>
+                            <li>使用 Tab 鍵可快速切換輸入欄</li>
+                            <li>輸入錯誤可使用欄位右邊「刪除」鍵刪除該筆資料</li>
+                            <li>重新整理網頁，或鍵盤按「F5」清空所有資料</li>
+                            <li>對畫面點選右鍵並點選「另存新檔」可儲存資料表</li>
+                            <li>建立好的資料表可直接選取並貼入Excel中做資料分析</li>
+                            <li>修改: 第一欄輸入"欄號"(例：姓名 => 3, 肩寬 => 5)</li>
+                            <li>修改: 第二欄輸入"修改值"</li>
+                            <li>確認欄號及修改值後按下「修改」即可修改單欄資料</li>
+                            <li>於基本資料欄位填入姓名或編號，按下「搜尋資料」即可定位資料欄</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form_btn">
+                    <input type="reset" value="由 最 上 加 入 列 表" onclick="addGarmentFromAbove()">
+                    <input type="reset" value="由 最 下 加 入 列 表" onclick="addGarmentFromBehind()">
+                </div>
+            </form>
+        </div>
+        
+        <div class="block_output">
+            <table id="displayTable">
+                <thead>
+                    <tr>
+                        <th><span>1.序列</span></th>
+                        <th><span>2.編號</span></th>
+                        <th><span>3.姓名</span></th>
+                        <th><span>4.頭圍</span></th>
+                        <th><span>5.肩寬</span></th>
+                        <th><span>6.袖長</span></th>
+                        <th><span>7.背長</span></th>
+                        <th><span>8.背心長</span></th>
+                        <th><span>9.衣長</span></th>
+                        <th><span>10.領圍</span></th>
+                        <th><span>11.上圍</span></th>
+                        <th><span>12.腰圍</span></th>
+                        <th><span>13.下圍</span></th>
+                        <th><span>14.褲腰圍</span></th>
+                        <th><span>15.褲下圍</span></th>
+                        <th><span>16.褲襠</span></th>
+                        <th><span>17.前襠</span></th>
+                        <th><span>18.大腿</span></th>
+                        <th><span>19.褲長</span></th>
+                        <th><span>20.裙長</span></th>
+                        <th><span>22.備註</span></th>
+                        <th><span>刪除</span></th>
+                        <th><span>修改:&nbsp&nbsp&nbsp&nbsp[&nbsp欄:&nbsp]&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[&nbsp修改值:&nbsp] </span></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="block_footer">
+            <div class="footer">
+                <h4>Copyright © 2022 Hofo Uniform Co., Ltd. All rights reserved.</h4>
+            </div>
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>

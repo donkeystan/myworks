@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> HF_UNIFORM [ Rev. 1.0.0 ] </title>
+
+    {% load static %} <link href="{% static "css/login_styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+<div class="main">
+    <h1> HF_UNIFORM [ Rev. 1.0.0 ]  </h1>
+
+    <div class="login-input">
+    
+        <h2> 請登入系統 </h2>
+        <form action="." method="POST" name="form1">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <th>
+                        帳號：
+                    </th>
+                    <td>
+                        <input type="text" name="username" id="username"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        密碼：
+                    </th>
+                    <td>
+                        <input type="password" name="password" id="password"/>       
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        登入：
+                    </th>
+                    <td>
+                        <input type="submit" name="button" id="button" value="登入" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        重新輸入：
+                    </th>
+                    <td>
+                        <input type="reset" name="button" id="button" value="重新輸入" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        系統訊息：
+                    </th>
+                    <td>
+                        <span> {{message}}</span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 量測單修改 </title>
+
+    {% load static %} <link href="{% static "css/edit.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+       
+    <div class="main">
+        <h1> 量測單修改 </h1>
+
+        <div class="option-table">
+            <table class="option-table-button">
+                <tr>
+                    <td>
+                        <form action="/main">
+                            <input type="submit" value="回主頁面" />
+                        </form>
+                    </td>
+
+                    <td>
+                        <form action="/query">
+                            <input type="submit" value="查詢量測單" />
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="option-table-message">
+                <tr>
+                    <th>
+                        <span> 系統訊息： </span>
+                    </th>
+                    <td>
+                        <span> {{ message }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="listing-input">
+            <h2> 基本資料及量測資料輸入： </h2>
+
+            <form action="/edit_from_detail/{{uniform.id}}/save/" method="POST" name="edit_from_detail" id="edit_from_detail">
+                {% csrf_token %}
+
+                <table class="listing-input-basic">
+                    <tr class="table-head">
+                        <th>
+                            <span> 基本資料：</span>
+                        </th>
+                        <td>
+                            <span> 內容： </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>姓名</th>
+                        <td>
+                            <input type="text" id="cust_name" name="cust_name" value={{uniform.CustName}}>
+                        </td>    
+                    </tr>
+                    
+                    <tr>
+                        <th>編號</th>
+                        <td>
+                            <input type="text" id="cust_no" name="cust_no" value={{uniform.CustNo}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>團體/客戶</th>
+                        <td>
+                            <input type="text" id="orgnization_name" name="orgnization_name" value={{uniform.OrgnizationName}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>性別</th>
+                        <td>
+                            {% if uniform.Gender == "M" %}
+                                <input type="radio" name="gender" id="gender_m" value="M" checked="checked"/> 男
+                                <input type="radio" name="gender" id="gender_f" value="F" /> 女
+                            {% else %}
+                                <input type="radio" name="gender" id="gender_m" value="M" /> 男
+                                <input type="radio" name="gender" id="gender_f" value="F" checked="checked"/> 女
+                            {% endif %}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>電話</th>
+                        <td>
+                            <input type="text" id="cust_phone" name="cust_phone" value={{uniform.CustPhone}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>E-mail</th>
+                        <td>
+                            <input type="text" id="cust_email" name="cust_email" value={{uniform.CustEmail}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>地址</th>
+                        <td>
+                            <input type="text" id="cust_addr" name="cust_addr" value={{uniform.CustAddr}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>建單日期</th>
+                        <td>
+                            <!-- <input type="radio" name="date_of_created" id="date_of_created" value={{uniform.DateOfCreated}} checked="checked"/> -->
+                            {{uniform.DateOfCreated}}
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-shirt">
+                    <tr  class="table-head">
+                        <th>
+                            <span> 上衣：</span>
+                        </th>
+                        <td>
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>頭圍</th>
+                        <td>
+                            <input type="text" id="hat" name="hat" value={{uniform.Hat}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>肩寬</th>
+                        <td>
+                            <input type="text" id="shoulder_width" name="shoulder_width" value={{uniform.ShoulderWidth}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>袖長</th>
+                        <td>
+                            <input type="text" id="sleeve_length" name="sleeve_length" value={{uniform.SleeveLength}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>背長</th>
+                        <td>
+                            <input type="text" id="back_length" name="back_length" value={{uniform.BackLength}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>背心長</th>
+                        <td>
+                            <input type="text" id="center_back" name="center_back" value={{uniform.CenterBack}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>衣長</th>
+                        <td>
+                            <input type="text" id="shirt_length" name="shirt_length" value={{uniform.ShirtLength}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>領圍</th>
+                        <td>
+                            <input type="text" id="collar" name="collar" value={{uniform.Collar}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>上圍</th>
+                        <td>
+                            <input type="text" id="chest" name="chest" value={{uniform.Chest}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>腰圍</th>
+                        <td>
+                            <input type="text" id="waist" name="waist" value={{uniform.Waist}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>下圍</th>
+                        <td>
+                            <input type="text" id="seat" name="seat" value={{uniform.Seat}}>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-pants">
+                    <tr  class="table-head">
+                        <th>
+                            <span> 褲/裙：</span>
+                        </th>
+                        <td>
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>褲腰圍</th>
+                        <td>
+                            <input type="text" id="waist_belt" name="waist_belt" value={{uniform.WaistBelt}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>褲下圍</th>
+                        <td>
+                            <input type="text" id="hip" name="hip" value={{uniform.Hip}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>褲襠</th>
+                        <td>
+                            <input type="text" id="crotch" name="crotch" value={{uniform.Crotch}}>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>前襠</th>
+                        <td>
+                            <input type="text" id="front_crotch" name="front_crotch" value={{uniform.FrontCrotch}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>大腿</th>
+                        <td>
+                            <input type="text" id="thigh" name="thigh" value={{uniform.Thigh}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>褲長</th>
+                        <td>
+                            <input type="text" id="pants_length" name="pants_length" value={{uniform.PantsLength}}>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>裙長</th>
+                        <td>
+                            <input type="text" id="skirt_length" name="skirt_length" value={{uniform.SkirtLength}}>
+                        </td>
+                    </tr>
+                </table>
+                
+                <table class="listing-input-remark">
+                    <tr>
+                        <th>備註</th>
+                        <td>
+                            <input type="text" id="remark" name="remark" value={{uniform.Remark}}>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-button">
+                    <tr>
+                        <td>
+                            <input type="submit" name="button_submit" id="button_submit" value="確認">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <form action="/detail/{{uniform.id}}/">
+                <table class="listing-input-button">
+                    <tr>
+                        <td>
+                            <input type="submit" name="button_reset" id="button_reset" value="取消">
+                        </td>        
+                    </tr>
+                </table>
+            </form>
+
+        </div>
+    </div>
+    
+{% endblock %}

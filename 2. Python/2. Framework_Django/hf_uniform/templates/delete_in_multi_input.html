@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>刪除制服</title>{% endblock %}
+{% block content %}
+	<h1> 刪除制服 </h1>
+	<form action="." method="POST" name="form1">
+		
+        {% csrf_token %}
+		
+        <div> 
+            編號：<input type="text" name="uniforn_id" />
+		</div>
+
+		<div>
+		    <input type="submit" name="button_delete" id="button_delete" value="確定刪除" />
+		</div>
+
+		<span style="color:red"> {{message}} </span>
+
+	</form>
+{% endblock %}

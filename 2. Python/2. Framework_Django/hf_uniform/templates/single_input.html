@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 單筆制服量測單 </title>
+
+    {% load static %} <link href="{% static "css/single_input_styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+       
+    <div class="main">
+        <h1> 單筆制服量測單 </h1>
+
+        <div class="option-table">
+            <table class="option-table-button">
+                <tr>
+                    <td>
+                        <form action="/main">
+                            <input type="submit" value="回主頁面" />
+                        </form>
+                    </td>
+
+                    <td>
+                        <form action="/query">
+                            <input type="submit" value="查詢量測單" />
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/single_input">
+                            <input type="submit" value="再量一件" />
+                        </form>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="option-table-message">
+                <tr>
+                    <th>
+                        <span> 系統訊息： </span>
+                    </th>
+                    <td>
+                        <span> {{ message }}</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="listing-input">
+            <h2> 基本資料及量測資料輸入： </h2>
+
+            <form action="." method="POST" name="uniform_form">
+                {% csrf_token %}
+
+                <table class="listing-input-basic">
+                    <tr class="table-head">
+                        <th>
+                            <span> 基本資料：</span>
+                        </th>
+                        <td>
+                            <span> 內容： </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>姓名</th>
+                        <td>
+                            {{uniform_form.cust_name}}
+                        </td>    
+                    </tr>
+                    
+                    <tr>
+                        <th>編號</th>
+                        <td>
+                            {{uniform_form.cust_no}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>團體/客戶</th>
+                        <td>
+                            {{uniform_form.orgnization_name}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>性別</th>
+                        <td>
+                            <input type="radio" name="gender" id="gender_m" value="M" checked="checked"/> 男
+                            <input type="radio" name="gender" id="gender_f" value="F" /> 女
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>電話</th>
+                        <td>
+                            {{uniform_form.cust_phone}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>E-mail</th>
+                        <td>
+                            {{uniform_form.cust_email}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>地址</th>
+                        <td>
+                            {{uniform_form.cust_addr}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>建單日期</th>
+                        <td>
+                            {{uniform_form.date_of_created}}
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-shirt">
+                    <tr  class="table-head">
+                        <th>
+                            <span> 上衣：</span>
+                        </th>
+                        <td>
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>頭圍</th>
+                        <td>
+                            {{uniform_form.hat}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>肩寬</th>
+                        <td>
+                            {{uniform_form.shoulder_width}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>袖長</th>
+                        <td>
+                            {{uniform_form.sleeve_length}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>背長</th>
+                        <td>
+                            {{uniform_form.back_length}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>背心長</th>
+                        <td>
+                            {{uniform_form.center_back}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>衣長</th>
+                        <td>
+                            {{uniform_form.shirt_length}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>領圍</th>
+                        <td>
+                            {{uniform_form.collar}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>上圍</th>
+                        <td>
+                            {{uniform_form.chest}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>腰圍</th>
+                        <td>
+                            {{uniform_form.waist}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>下圍</th>
+                        <td>
+                            {{uniform_form.seat}}
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-pants">
+                    <tr  class="table-head">
+                        <th>
+                            <span> 褲/裙：</span>
+                        </th>
+                        <td>
+                            <span> 尺寸：</span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>褲腰圍</th>
+                        <td>
+                            {{uniform_form.waist_belt}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>褲下圍</th>
+                        <td>
+                            {{uniform_form.hip}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>褲襠</th>
+                        <td>
+                            {{uniform_form.crotch}}
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <th>前襠</th>
+                        <td>
+                            {{uniform_form.front_crotch}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>大腿</th>
+                        <td>
+                            {{uniform_form.thigh}}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>褲長</th>
+                        <td>
+                            {{uniform_form.pants_length}}                        
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>裙長</th>
+                        <td>
+                            {{uniform_form.skirt_length}}
+                        </td>
+                    </tr>
+                </table>
+                
+                <table class="listing-input-remark">
+                    <tr>
+                        <th>備註</th>
+                        <td>
+                            {{uniform_form.remark}}
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="listing-input-button">
+                    <tr>
+                        <td>
+                            <input type="submit" name="button_submit" id="button_submit" value="送出">
+                        </td>
+                        <td>
+                            <input type="reset" name="button_reset" id="button_reset" value="重設">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+    
+{% endblock %}

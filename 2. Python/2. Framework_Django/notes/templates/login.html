@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 隨手記 </title>
+
+    {% load static %} <link href="{% static "css/styles_login.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1> 隨手記  </h1>
+
+        <div class="login-input">
+        
+            <h2> 請登入系統 </h2>
+            <form action="." method="POST" name="form1">
+                {% csrf_token %}
+                <table>
+                    <tr>
+                        <td>
+                            帳號：<input type="text" name="username" id="username"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            密碼：<input type="password" name="password" id="password"/>       
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            登入：<input type="submit" name="button" id="button" value="登入" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span> 系統訊息：{{message}}</span>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+{% endblock %}

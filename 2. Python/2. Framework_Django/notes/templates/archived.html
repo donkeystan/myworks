@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 隨手記 </title>
+
+    {% load static %} <link href="{% static "css/styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1> 封存的隨手記  </h1>
+        <div class = "option-table">
+            <table>
+                <tr>
+                    <td>
+                        <form action="/logout">
+                            <input type="submit" value="登出" />
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/notes">
+                            <input type="submit" value="回主頁" />
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="notes-input">
+            <span> 系統訊息： {{message}} </span>
+        </div>
+
+        <div class="show-notes">
+            
+            <h2> {{ username }} 的封存隨手記 </h2>
+
+            {% for note in notes %}
+            <div class = "notes-block">
+                <table class="notes-block-hover">
+                    <tr class="notes-block-title-row">
+                        <th class="notes-title">標題</th>
+                        <td> {{ note.Title }} </td>
+                    </tr>
+                    <tr class="notes-block-content-row">
+                        <th class="notes-content">內容</th>
+                        <td> {{ note.Content }} </td>
+                    </tr>
+                </table>
+
+                <table class="notes-block-option">
+                    <tr>
+                        <th class="notes-button">選項</th>
+                        <td>
+                            <form action="/de_archiving/{{note.id}}/">
+                                <input type="submit" value="解封存" />
+                            </form>
+                        </td>
+                        <td>
+                            <form action="/delete/{{note.id}}/">
+                                <input type="submit" value="刪 除" />
+                            </form>
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            {% endfor %}
+        </div>        
+    </div>
+{% endblock %}

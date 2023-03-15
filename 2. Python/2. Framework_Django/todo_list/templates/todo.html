@@ -1,0 +1,143 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 待辦事項 [ Rev. 1.0.0 ] </title>
+
+    {% load static %} <link href="{% static "css/styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1> 待辦事項 </h1>
+        <div class="input_todo">
+            <h2> 建立待辦事項 </h2>
+                <form action="." method="POST" name="form" id="form1">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                            <th class="show_title">標題</th>
+                            <th class="show_content">內容</th>
+                            <th class="show_complete">完成</th>
+                            <th class="show_complete">選項</th>
+                        </tr>
+                        <tr>
+                            <td class="show_title">
+                                <input type="text" name="title" id="input_title" />
+                            </td>
+                            <td class="show_content">
+                                <input type="text" name="taskContent" id="input_taskContent" />
+                            </td>
+                            <td class="show_complete"> 
+                                <input type="radio" name="complete" id="complete_true" value="True"/> 完  成
+		                        <input type="radio" name="complete" id="complete_false" value="False" checked="checked"/> 未完成
+                            </td>
+                            <td class="show_complete">
+                                <input type="submit" name="button_new" id="button_new" value="新增事項">
+		                        <input type="reset" name="button_reset" id="button_reset" value="重    填">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <span> {{ message}} </span>
+                
+                <table>
+                    <tr>
+                        <td>
+                            <form action="/archived">
+                                <input type="submit" value="查看封存事項" />
+                            </form>
+                        </td>
+                    </tr>
+                </table>          
+        </div>
+
+        <div class="show_todo">
+            <h2> 待完成事項 </h2>
+            <table>
+                <th class="show_no">編號</th>
+                <th class="show_title">標題</th>
+                <th class="show_content">內容</th>
+                <th class="show_complete">完成</th>
+                <th class="show_time">建立日期</th>
+                <th class="show_button">異動</th>
+            </table>
+
+            <table class="hover_content">
+                {% for todo_task in todo_tasks %}
+                    <tr>
+                        <td class="show_no"> {{ forloop.counter  }}</td>
+                        <td class="show_title"> {{ todo_task.title }}</td>
+                        <td class="show_content"> {{ todo_task.taskContent }}</td>
+
+                        <td class="show_complete">
+                            {% if todo_task.complete == "True" %}
+                                <div> 已完成 </div>
+                            {% else %}
+                                <div> 未完成 </div>
+                            {% endif %}                         
+                        </td>
+
+                        <td class="show_time"> {{ todo_task.dateOfCreated }}</td>
+                        <td class="show_button">
+                            <form action="/complete/{{todo_task.id}}/">
+                                <input type="submit" value="標示完成" />
+                            </form>
+                        
+                            <form action="/edit/{{todo_task.id}}/">
+                                <input type="submit" value="修改內容" />
+                            </form>
+                        
+                            <form action="/delete/{{todo_task.id}}/">
+                                <input type="submit" value="刪   除" />
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+
+        <div class="show_done">
+            <h2> 已完成事項 </h2>
+            <table>
+                <th class="show_no">編號</th>
+                <th class="show_title">標題</th>
+                <th class="show_content">內容</th>
+                <th class="show_complete">完成</th>
+                <th class="show_time">建立日期</th>
+                <th class="show_button">異動</th>
+            </table>
+
+            <table class="hover_content">
+                {% for done_task in done_tasks %}
+                    <tr>
+                        <td class="show_no"> {{ forloop.counter }}</td>
+                        <td class="show_title"> {{ done_task.title }}</td>
+                        <td class="show_content"> {{ done_task.taskContent }}</td>
+                        <td class="show_complete">
+                            {% if done_task.complete == "False" %}
+                                <div> 未完成 </div>
+                            {% else %}
+                                <div> 已完成 </div>
+                            {% endif %}                         
+                        </td>
+                        <td class="show_time"> {{ done_task.dateOfCreated }}</td>
+                        <td class="show_button">
+                            <form action="/archiving/{{done_task.id}}">
+                                <input type="submit" value="封     存" />
+                            </form>
+                            <form action="/incomplete/{{done_task.id}}">
+                                <input type="submit" value="標示未完成" />
+                            </form>
+                            <form action="/delete/{{done_task.id}}">
+                                <input type="submit" value="刪     除" />
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        
+    </div>
+{% endblock %}

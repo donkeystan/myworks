@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}<title>取消封存單筆事項</title>{% endblock %}
+{% block content %}
+	<h1> 取消封存單筆事項 </h1>
+	<form action="." method="POST" name="form1">
+		
+        {% csrf_token %}
+		
+        <div>
+            封存 ：<input type="radio" name="de_archiving" id="de_archiving" value="False"/> 無封存
+		</div>
+
+		<div>
+		    <input type="submit" name="button_de_archiving" id="button_de_archiving" value="取消封存" />
+		</div>
+
+		<span style="color:red"> {{message}} </span>
+
+	</form>
+{% endblock %}

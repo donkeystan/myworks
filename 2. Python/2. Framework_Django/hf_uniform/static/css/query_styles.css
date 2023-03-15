@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Mono',monospace;
+}
+
+.main
+{
+    display: block;
+    width: 1600px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+    border: solid gray 5px;
+    border-radius: 5px;
+}
+
+.main h1
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+/* <---------- Option Table Settings ---------->*/
+.option-table
+{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: solid gray 0.5px;
+}
+
+.option-table table
+{
+    width: 100%;   
+}
+
+.option-table-show-main
+{
+    width: 10%;
+}
+
+.option-table-show-main input
+{
+    height: 30px;
+}
+
+.option-table-submit-main
+{
+    width: 90%;
+}
+
+.option-table-submit-main input
+{
+    float: left;
+}
+
+
+/* <---------- Query Settings ---------->*/
+.query-section
+{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: solid gray 0.5px;
+}
+
+.table-query-input
+{
+    width: 60%;
+    margin-top: 10px;
+    border: solid gray 0.5px;
+}
+
+.query-title
+{
+    text-align: left;
+    width: 20%;
+    font-size: 14px;
+}
+
+.query-text
+{
+    width: 30%;
+    font-size: 14px;
+}
+
+.query-text input
+{
+    /* display: inline-block; */
+    float: left;
+    width: 300px;
+}
+
+.table-query-message
+{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.table-query-message th, td
+{
+    width: 25%;
+    height: 25px;
+    text-align: center;
+    font-size: 14px;
+    border: dotted gray 0.5px;
+}
+
+.table-query-message td, span
+{
+    color: black;
+}
+
+.button-submit-for-query input
+{
+    width: 60%;
+    height: 30px;
+}
+
+
+/* <---------- Listing Settings ---------->*/
+.listing-display
+{
+    word-wrap: break-word; 
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: solid gray 0.5px;
+}
+
+.listing-display table
+{
+    word-wrap: break-word; 
+    margin-top: 5px;
+    width: 100%;
+}
+
+.listing-display th
+{
+    display: inline-block;
+    word-wrap: break-word; 
+    border: dotted gray 0.5px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.listing-display td
+{
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 10px;
+    height: 50px;
+}
+
+.listing-display-table-hover tr:hover
+{
+    transform: translateY(0.2vh);
+    background: lightgray;
+    box-shadow: 1px 1px gray;
+    transition: 0.5s;
+}
+
+.listing-display-table-hover input
+{
+    height: 30px;
+}
+
+.listing-display-table-show-no
+{
+    text-align: center;
+    width:2%;
+}
+
+.listing-display-table-show-name
+{
+    text-align: center;
+    width:6%;
+}
+
+.listing-display-table-show-reg
+{ 
+    text-align: left;
+    width:8%;
+}
+
+.listing-display-table-show-org
+{
+    text-align: left;
+    width:10%;
+}
+
+.listing-display-table-show-gender
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-date
+{
+    text-align: left;
+    width:5%;
+}
+
+.listing-display-table-dim
+{
+    text-align: center;
+    width:3%;
+}
+
+.listing-display-table-show-remark
+{
+    width: 5%;
+}
+
+.listing-display-table-detail
+{
+    width: 2%;
+}
+
+.listing-display-table-delete
+{
+    width: 2%;
+}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> 測試用 - 排列組合表 </title>
+
+    {% load static %} <link href="{% static "css/test_style.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="main">
+        <h1> {{type_check}} </h1>
+        <h2> The Permutations List of </h2>
+        <h2>&nbsp&nbsp&nbsp&nbsp{{ nums }}&nbsp&nbsp&nbsp&nbsp</h2>
+        <table>
+            {% for list in result %}
+                
+                <tr>
+                    <th> Combo {{forloop.counter}}</th>
+                    {% for item in list %}
+                        <td> {{ item }} </td>
+                    {% endfor %}
+                </tr>
+                
+                {% empty %}
+                <div> 錯誤，資料內容為空 </div>
+                
+            {% endfor %}
+        </table>
+        <div class="footer">
+            <h1> MACHINE STATE : WORKING </h1>
+        </div>
+    </div>
+
+{% endblock %}

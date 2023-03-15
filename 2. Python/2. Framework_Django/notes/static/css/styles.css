@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Mono',monospace;
+}
+
+.main
+{
+    display: block;
+    width: 1080px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* border: solid gray 5px; */
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.main h1
+{
+    text-align: center;
+    font-size: 20px;
+}
+
+.main h2
+{
+    font-size: 20px;
+}
+
+.main td
+{
+    font-size: 12px;
+}
+
+/* <---------- Menu ---------->*/
+.option-table
+{
+    display: block;
+    /* border: solid gray 2px; */
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 30%;
+    height: 25px;
+}
+
+.option-table table
+{
+    width: 100%;
+    height: 20px;
+}
+
+.option-table td
+{
+    width: 50%;
+    height: 20px;
+}
+
+.option-table input
+{
+    width: 100%;
+}
+
+
+/* <---------- Notes Input ---------->*/
+.notes-input
+{
+    display: block;
+    border: solid gray 2px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.notes-input table
+{
+    /* border: solid gray 2px; */
+    margin-left: 5px;
+    width: 95%;
+    height:100px;
+}
+
+.notes-input th
+{
+    width: 20%;
+    /* border: solid gray 2px; */
+}
+
+.notes-input td
+{
+    width: 80%;
+    /* border: solid gray 2px; */
+}
+
+.notes-input-title-row
+{
+    height: 30px;
+}
+
+.notes-input-content-row
+{
+    height: 30px;
+}
+
+.notes-input-button-row
+{
+    height: 30px;
+}
+
+.notes-input-button-row input
+{
+    width: 30%;
+}
+
+#input_title
+{
+    width: 99%;
+    line-height: 30px;
+}
+
+#input_content
+{
+    width: 99%;
+    height: 30px;
+}
+
+/* <---------- Show Notes ---------->*/
+.show-notes
+{
+    display: block;
+    /* border: solid gray 2px; */
+    margin-top: 5px;
+    margin-left: 5px;
+    overflow: visible;
+}
+
+.notes-block
+{
+    display: block;
+    float: left;
+    margin: 5px;
+    /* border: solid yellow 1px; */
+    width: 300px;
+    height: 300px;
+    font-size: 12px;
+}
+
+.notes-block-hover th
+{
+    width: 10%;
+}
+
+.notes-block-hover td
+{
+    width: 90%;
+}
+
+.notes-block-hover
+{
+    /* border: solid gray 1px; */
+    border-radius: 10px;
+    background-color: yellow;
+    width: 100%;
+    height: 280px;
+}
+
+/* .notes-block-hover table
+{
+    border: solid gray 1px;
+} */
+
+
+.notes-block-title-row
+{
+    height: 30px;
+}
+
+#edit_title
+{
+    width: 100%;
+    line-height: 30px;
+}
+
+.notes-block-title-row th, td
+{
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    /* border: solid gray 1px; */
+}
+
+.notes-block-content-row
+{
+    height: 250px;
+}
+
+#edit_content
+{
+    width: 100%;
+    height: 230px;
+}
+
+.notes-block-content-row th, td
+{
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+    /* border: solid gray 1px; */
+}
+
+
+.notes-block-hover:hover
+{
+    transform: translateY(0.2vh);
+    background: orange;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.notes-block-option
+{
+    /* border: solid gray 1px; */
+    width: 100%;
+    height: 20px;
+}
+
+.notes-block-option th
+{
+    width: 10%;
+}
+
+.notes-block-option td
+{
+    width: 30%;
+}
+
+/* .notes-block-option tr > th, td
+{
+    border: solid gray 1px;
+} */
+
+.notes-block-option input
+{
+    width: 95%;
+}

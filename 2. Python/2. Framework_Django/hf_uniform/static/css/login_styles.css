@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Mono',monospace;
+}
+
+.main
+{
+    display: block;
+    width: 650px;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: solid gray 5px;
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.main h1
+{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.main h2
+{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.main td
+{
+    font-size: 12px;
+}
+
+.login-input
+{
+    width: 100%;
+}
+
+.login-input table
+{
+    margin-top: 30px;
+    margin-left: 10%;
+    width: 70%;
+}
+
+.login-input tr
+{
+    width: 100%;
+    height: 40px;
+}
+.login-input th
+{
+    width: 20%;
+    margin-left: 15%;
+}
+
+.login-input td
+{
+    width: 80%;
+}
+
+.login-input input
+{
+    width: 100%;
+    height: 40px;
+}
+
+
+.login-input span
+{
+    font-size: 14px;
+    color: red;
+}

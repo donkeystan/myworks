@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+    <title> HF_UNIFORM [ Rev. 1.0.0 ] </title>
+
+    {% load static %} <link href="{% static "css/index_styles.css" %}" rel="stylesheet" type="text/css" />
+
+{% endblock %}
+
+{% block content %}
+    <div class="main">
+        <h1> HF_UNIFORM [ Rev. 1.0.0 ] </h1>
+        <div class = "option-table">
+            <table >
+                {% if request.user.is_authenticated %}
+                <h2> 哈囉 {{name}} 您已登入，請點選下列選項： </h2>
+                <tr>
+                    <td>    
+                        <form action="/logout">
+                            <input type="submit" value="登出" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="/main">
+                            <input type="submit" value="進入系統主頁面" />
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="/query">
+                            <input type="submit" value="查看量測單" />
+                        </form>
+                    </td>
+                </tr>
+                
+                {% else %}
+                <h2> 尚未登入，請點選以登入HF_UNIFORM系統 </h2>
+                <tr>
+                    <td>    
+                        <form action="/login">
+                            <input type="submit" value="登入" />
+                        </form>
+                    </td>
+                </tr>
+
+                {% endif %}
+            </table>
+        </div>
+    </div>
+{% endblock %}
