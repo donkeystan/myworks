@@ -1,356 +1,373 @@
-### These are my works
+# Introduction:
+Hi, I'm Stan. I have been learning programming on my own for almost two years, and following topics are the works I made with C, Python, JavaScript. I will keep doing my coding works till the day I'm good enough to be a professional programmer.
 
-#### 1. Programming related works
 
-- **C**
+# Programming-related works
 
-  - Garment Measurement Record Tool
+## 1. C
 
-    - To Compile this program
+#### [ Work Build : Garment Measurement Record Tool ]
 
-      ```powershell
-      cd \Stan_Project\1. C\Garment Measurement
-      gcc .\sys_measure_v0.0.1.c
-      ```
-      
-    - Introduction
+- To Compile this program
 
-      > This is my first project, I tried use C to make a simple input and then text record output program.
-      >
-      > It's designed for a friend who runs a small uniform company.
-      >
-      > There is a concept self-made data-base using tree, and linked-list under construction.
-      >
+  ```powerhsell
+  cd \Stan_Project\1. C\Garment Measurement
+  gcc .\sys_measure_v0.0.1.c
+  ```
 
-      
+- Introduction
 
-  - Grid Puzzle
+  >This is my first project, I tried use C to make a simple input and then text record output program.
+  > It's designed for a friend who runs a small uniform company.
+  > There is a concept self-made data-base using tree, and linked-list under construction.
 
-    - o Compile this program
 
-      ```powershell
-      cd \Stan_Project\1. C\Garment Measurement
-      gcc .\sys_measure_v0.0.1.c
-      ```
 
-    - Introduction
-    
-      > This is a small game built just for fun.
-      >
-      > By updating the TILE and the BOARD_ROW_SIZE BOARD_COL_SIZE, the Grid Puzzle can be enlarged
-    
-      
-    
-      
+#### [ Work Build : Grid Puzzle ]
+- Compile this program
 
-- **Python**
+  ```powershell
+  cd \Stan_Project\1. C\Garment Measurement
+  gcc .\sys_measure_v0.0.1.c
+  ```
 
-  - **Parser** 
+- Introduction
 
-    - **Inventory Generator**
+  >This is a small game built just for fun.
+  >
+  >By updating the TILE and the BOARD_ROW_SIZE BOARD_COL_SIZE, the Grid Puzzle can be enlarged
 
-      - To run this script, go to the designated directory 
 
-        ```powershell
-        cd \Stan_Project\2. Python\1. Parser\1. Parser_inventory_generator
-        python .\INV_GEN_V1.0.py
-        ```
 
-        a new folder and a human readable report file will be generated.
+## 2. Python
 
-      - Introduction
+### I. Parser
 
-        > Our company's ERP system does not generate a proper inventory report for staff's quick reference,
-        >
-        > so I write this script to quickly organize a human readable excel chart for my colleagues.
-        >
-        > This program can be packed to an executable file for windows.
+#### [ Work Build : Inventory Generator ]
 
-      
+- To run this script, go to the designated directory 
 
-    - **Inventory History Generator**
+  ```powershell
+  cd \Stan_Project\2. Python\1. Parser\1. Parser_inventory_generator
+  python .\INV_GEN_V1.0.py
+  ```
 
-      - To run this script, go to the designated directory 
+  a new folder and a human readable report file will be generated.
 
-        ```powershell
-        \Stan_Project\2. Python\1. Parser\2. Parser_inventory_history_generator
-        ```
+- Introduction
 
-        then open the PART_HX_WH_(MULTIPLE)_v1.py file with any IDE
+  > Our company's ERP system does not generate a proper inventory report for staff's quick reference,
+  >
+  > so I write this script to quickly organize a human readable excel chart for my colleagues.
+  >
+  > This program can be packed to an executable file for windows.
 
-        change the wh_list[ ]  and part_list[ ] if certain Part No and Warehouse No is required
 
-        then run the python script file
 
-        ```powershell
-        python .\PART_HX_WH_(MULTIPLE)_v1.py
-        ```
+#### [ Work Build : Inventory History Generator ]
 
-      - Introduction
+- To run this script, go to the designated directory 
 
-        > Our company's ERP system does not keep record of how the inventory changes,
-        >
-        > so I made this script to allow people to find the inventory changes within a certain period of time
+  ```powershell
+  \Stan_Project\2. Python\1. Parser\2. Parser_inventory_history_generator
+  ```
 
-      
+  then open the PART_HX_WH_(MULTIPLE)_v1.py file with any IDE
 
-    - **PO Splitter**
+  change the wh_list[ ]  and part_list[ ] if certain Part No and Warehouse No is required
 
-      - To run this script, go to the designated directory 
+  then run the python script file
 
-        ```powershell
-        \Stan_Project\2. Python\1. Parser\3. Parser_PO_splitter
-        ```
+  ```powershell
+  python .\PART_HX_WH_(MULTIPLE)_v1.py
+  ```
 
-        make sure to change the customer [studio A]  PO's name to **in.XLSX**
+- Introduction
 
-        then run the python script file
+  > Our company's ERP system does not keep record of how the inventory changes,
+  >
+  > so I made this script to allow people to find the inventory changes within a certain period of time
 
-        ```powershell
-        python xls_split_v1.py
-        ```
 
-      - Introduction
 
-        > One of our customer Studio A always issue PO to us with just an Excel file. They have more than 40 stores in Taiwan.
-        >
-        > Our ERP system can only handle one purchase order a time, so all 40 stores information has to separated into 40 excel files.
-        >
-        > I wrote this script to help our colleague saves time of splitting an Excel file to 40 or more excel files.
+#### [ Work Build : Purchase Order Splitter ]
 
-    
+- To run this script, go to the designated directory 
 
-  - **Framework - Django**
+  ```powershell
+  \Stan_Project\2. Python\1. Parser\3. Parser_PO_splitter
+  ```
 
-    - **Uniform Measurement System**
+  make sure to change the customer [studio A]  PO's name to **in.XLSX**
 
-      - To run this system, go to the designated directory
+  then run the python script file
 
-        ```powershell
-        \Stan_Project\2. Python\2. Framework_Django\hf_uniform
-        ```
+  ```powershell
+  python xls_split_v1.py
+  ```
 
-        To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+- Introduction
 
-        then run the following
+  > One of our customer Studio A always issue PO to us with just an Excel file. They have more than 40 stores in Taiwan.
+  >
+  > Our ERP system can only handle one purchase order a time, so all 40 stores information has to separated into 40 excel files.
+  >
+  > I wrote this script to help our colleague saves time of splitting an Excel file to 40 or more excel files.
 
-        ```powershell
-        python manage.py runserver //a designated IP can be assigned to it
-        ```
 
-        then in your web browser, type in http://127.0.0.1:8000 if no designated IP is given.
 
-        to login, a temp username: danielliu and password: hofo1981 can be used to test the system.
+### II. Framework - Django
 
-      - Introduction
+#### [ Work Build : Uniform Measurement System ]
 
-        >This is a system built for my friend who runs a small uniform business. It is designed for him to put the customer uniform measurement record into the system through a web browser on a laptop or mobile phone.
-        >
-        >Any change made or system logging in will be written in the file log.txt
-        >
-        >Currently my friend is checking what kind of module he needs, and I will help him extend the system in the future.
+- To run this system, go to the designated directory
 
-      
+  ```powershell
+  \Stan_Project\2. Python\2. Framework_Django\hf_uniform
+  ```
 
-    - **ToDo List**
+  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
 
-      - To run this system, go to the designated directory
+  then run the following
 
-        ```powershell
-        \Stan_Project\2. Python\2. Framework_Django\todo_list
-        ```
+  ```powershell
+  python manage.py runserver //a designated IP can be assigned to it
+  ```
 
-        To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+  then in your web browser, type in http://127.0.0.1:8000 if no designated IP is given.
 
-        then run the following
+  to login, a temp username: danielliu and password: hofo1981 can be used to test the system.
 
-        ```powershell
-        python manage.py runserver //a designated IP can be assigned to it
-        ```
+- Introduction
 
-        then in your web browser, type in http://127.0.0.1:8000/todo/ if no designated IP is given.
+  >This is a system built for my friend who runs a small uniform business. It is designed for him to put the customer uniform measurement record into the system through a web browser on a laptop or mobile phone.
+  >
+  >Any change made or system logging in will be written in the file log.txt
+  >
+  >Currently my friend is checking what kind of module he needs, and I will help him extend the system in the future.
 
-      - Introduction
 
-        >This is a project made my classmate in NTUB, where the teacher want us to build tools using Django.
 
-      
+#### [ Work Build : ToDo List ]
 
-    - **Notes**
+- To run this system, go to the designated directory
 
-      - To run this system, go to the designated directory
+  ```powershell
+  \Stan_Project\2. Python\2. Framework_Django\todo_list
+  ```
 
-        ```powershell
-        \Stan_Project\2. Python\2. Framework_Django\notes
-        ```
+  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
 
-        To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+  then run the following
 
-        then run the following
+  ```powershell
+  python manage.py runserver //a designated IP can be assigned to it
+  ```
 
-        ```powershell
-        python manage.py runserver //a designated IP can be assigned to it
-        ```
+  then in your web browser, type in http://127.0.0.1:8000/todo/ if no designated IP is given.
 
-        then in your web browser, type in 127.0.0.1:8000 if no designated IP is given.
+- Introduction
 
-        to login, two temp users can be logged in to access individual's contents
+  >This is a project made my classmate in NTUB, where the teacher want us to build tools using Django.
 
-        user1: lynnpan password1: lynn123456
 
-        user2: johnliu password2: john654321
 
-      - Introduction
+#### [ Work Build : Notes ]
 
-        >Same as the ToDo List, this app is built for a classmate in NTUB.
-        >
-        >The notes app allows different people logging in to access different contents.
+- To run this system, go to the designated directory
 
-    
+  ```powershell
+  \Stan_Project\2. Python\2. Framework_Django\notes
+  ```
 
-  - **Data Analysis**
+  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
 
-    - **NASA Near Earth Object Analysis**
+  then run the following
 
-      To see the Data Analysis, go to the directory
-      
-      ```powershell
-      \Stan_Project\2. Python\3. Data Analysis
-      ```
-      
-      and open the NASA_near_earth_object.ipynb with VS Code with the extension
-      
-      or just click the following link to see a cloud version
-      
-      https://colab.research.google.com/drive/1XyY1iWnIHLGcU8yuEcRfzjqKq7sigpXW#scrollTo=67mAxAD78I6t
-      
-    - Introduction
-    
-      > I tried to learn the Data Analysis, so I search kaggle.com for free Data Sets to do my practice on Data Analysis
-    
-    
+  ```powershell
+  python manage.py runserver //a designated IP can be assigned to it
+  ```
 
-- **JavaScript**
+  then in your web browser, type in 127.0.0.1:8000 if no designated IP is given.
 
-  - **Boundary Cap Holes**
-    
-    - **Hand Control Version**
-    
-      - To run this web page, just go to the diretory
-    
-        ```powershell
-        \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\Hand_control\radom_exhibit_v3.3
-        ```
-    
-        directly open up the file < rand.html > and then click only once anywhere on the page
-    
-        The PC used to run this page must have a web camera to activate the hand control
-    
-      - Introduction
-    
-        > This web page is created for an Art Exhibition called "BOUNDARY_CAP HOLES" owned by my brother-in-law,
-        >
-        > who opened a small workshop of art.
-        >
-        > I use the media pipe to capture the hand gesture and then extract and process the data for DOM object controls
-        >
-        > On the page, there will be random video pop up and vanish. You can drag, zoom, rotate or kill a random video by hand.
-    
-        
-    
-    - **No Hand Control Version**
-    
-      - To run this web page, just go to the diretory
-    
-        ```powershell
-        \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\No_hand_control\radom_exhibit
-        ```
-    
-        directly open up the file < rand.html > and then click only once anywhere on the page
-    
-        
-    
-      - Introduction
-    
-        > This is the first version web page for Art Exhibition called "BOUNDARY_CAP HOLES" owned by my brother-in-law,
-        >
-        > who opened a small workshop of art.
-        >
-        > On the page, there will be random video pop up and vanish.
-    
-    
-    
-  - **Uniform Measurement Page**
+  to login, two temp users can be logged in to access individual's contents
+
+  user1: lynnpan password1: lynn123456
+
+  user2: johnliu password2: john654321
+
+- Introduction
+
+  >Same as the ToDo List, this app is built for a classmate in NTUB.
+  >
+  >The notes app allows different people logging in to access different contents.
+
+
+
+### III. Data Analysis
+
+#### [ Work Build : NASA Near Earth Object Analysis ]
+
+- To see the Data Analysis, go to the directory
+
+  ```powerhsell
+  \Stan_Project\2. Python\3. Data Analysis
+  ```
+
+  and open the NASA_near_earth_object.ipynb with VS Code with the extension
+
+  or just click the following link to see a cloud version
+
+  [Read it on Google Colab](https://colab.research.google.com/drive/1XyY1iWnIHLGcU8yuEcRfzjqKq7sigpXW#scrollTo=67mAxAD78I6t)
+
+- Introduction
+
+  > Data were downloaded from kaggle.com for my practice on Data Analysis
+
+
+
+## 3. JavaScript
+
+### [ Exhibition : Boundary Cap Holes ](https://piecetw.com/2022/09/19/boundary/?fbclid=IwAR1qgHL6bP7_Ffn5VePIJmDYM6bjwSLeaeklIdoFaxEpS_UjNNgStj7IbJ0)
+
+#### [ Work Build : Hand Control Version ]
+
+- To run this web page, just go to the diretory
+
+  ```powershell
+  \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\Hand_control\radom_exhibit_v3.3
+  ```
+
+  directly open up the file < rand.html > and then click only once anywhere on the page
+
+  The PC used to run this page must have a web camera to activate the hand control
+
+- Introduction
+
+  [Click to see how it's played ]( https://www.facebook.com/526624591/videos/1110140703223793/ )
   
-    - To run this web page, just go to the diretory
+  [Click to see how it's played](https://www.facebook.com/1375058317/videos/659041292242353/)
   
-      ```powershell
-      Stan_Project\3. JavaScript\Garments_Input
-      ```
+  > This web page is created for an Art Exhibition called "BOUNDARY_CAP HOLES" owned by my brother-in-law,
+  >
+  > who opened a small workshop of art.
+  >
+  > I use the **mediapipe** to capture the hand gesture and then extract and process the data for DOM object controls
+  >
+  > On the page, there will be random video pop up and vanish. You can drag, zoom, rotate or kill a random video by hand.
   
-      directly open up the file < measurement.html > and the page can be used to save temporary data
   
-      
-  
-    - Introduction
-  
-      > This is a single web page version for my friend's uniform workshop.
-      >
-      > It's made to put in his laptop to prevent system failure, and he can use this page directly for record saving.
+
+#### [ Work Build : W/O Hand Control Version ]
+
+- To run this web page, just go to the diretory
+
+  ```powershell
+  \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\No_hand_control\radom_exhibit
+  ```
+
+  directly open up the file < rand.html > and then click only once anywhere on the page
+
+- Introduction
+
+  > This is the first version web page for Art Exhibition called "BOUNDARY_CAP HOLES" owned by my brother-in-law,
+  >
+  > who opened a small workshop of art.
+  >
+  > On the page, there will be random video pop up and vanish.
 
 
 
-#### 2. Excel VBA Macro
+#### [ Work Build : Uniform Measurement Page ]
 
-- **Inventory Generator**
+- To run this web page, just go to the diretory
 
-  - To run the Excel macro, go to the directory
+  ```powershell
+  Stan_Project\3. JavaScript\Garments_Input
+  ```
 
-    ```powershell
-    \Stan_Project\4. Excel_VBA Macro
-    ```
+  directly open up the file < measurement.html > and the page can be used to save temporary data
 
-    open < infinite_loop_v1.3.1.xlsm >  and the raw data < inventory.XLSX >
+- Introduction
 
-    and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!inventory_check > macro
+  > This is a single web page version for my friend's uniform workshop.
+  >
+  > It's made to put in his laptop to prevent system failure, and he can use this page directly for record saving.
+
+
+
+## 4. Excel VBA Macro
+
+#### [ Work Build : Inventory Generator ]
+
+- To run the Excel macro, go to the directory
+
+  ```powershell
+  \Stan_Project\4. Excel_VBA Macro
+  ```
+
+  open < infinite_loop_v1.3.1.xlsm >  and the raw data < inventory.XLSX >
+
+  and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!inventory_check > macro
+
+- Introduction
+
+  > This is the excel version of inventory generator
+  >
+  > It's made to turn the system raw data to human readable report.
+
+
+
+#### [ Work Build : Sales Record Generator ]
+
+- To run the Excel macro, go to the directory
+
+  ```powershell
+  \Stan_Project\4. Excel_VBA Macro
+  ```
+
+  open < infinite_loop_v1.3.1.xlsm >  and the raw data < sales record_0220.XLSX >
+
+  and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!sales_check > macro
+
+- Introduction
+
+  > This macro is to help supervisor to quickly get the right pivot data to see each salesperson's sales record
+  >
+  > It's made to turn the system raw data to human readable report.
+
+
+
+
+## 5. 3D Works
+
+#### [ Work Build : ProE ]
+
+- TV WALL MOUNT 01
 
   - Introduction
 
-    > This is the excel version of inventory generator
-    >
-    > It's made to turn the system raw data to human readable report.
+    > I made these parts on my own for my company's new product EDM making.
 
-  
-
-- **Sales Record Generator**
-
-  - To run the Excel macro, go to the directory
-
-    ```powershell
-    \Stan_Project\4. Excel_VBA Macro
-    ```
-
-    open < infinite_loop_v1.3.1.xlsm >  and the raw data < sales record_0220.XLSX >
-
-    and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!sales_check > macro
+- TV WALL MOUNT 02
 
   - Introduction
 
-    > This macro is to help supervisor to quickly get the right pivot data to see each salesperson's sales record
-    >
-    > It's made to turn the system raw data to human readable report.
+    > Same as above, I made these parts on my own for my company's new product EDM making.
+    
 
+​				
 
+#### [ Work Build : Keyshot ]
 
+- TV Wall Mount 32-55
 
-#### 3. 3D Works
+- TV Wall Mount 32-70
 
-- ProE
-  - TV WALL MOUNT 01
-  - TV WALL MOUNT 02
-- Keyshot
-  - TV Wall Mount 32-55
-  - TV Wall Mount 32-70
-  - 11in1 Keyboard Hub
+- 11in1 Keyboard Hub
 
- 
+  - Introduction
+
+  > These are 3D artworks for my company's EDM.
+  >
+  > I made them in Keyshot
