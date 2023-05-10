@@ -17,7 +17,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - Source Code
 
   ```powerhsell
-  cd .\myworks\1. C\Garment Measurement\Garment Measurement
+  myworks\1. C\Garment Measurement\Garment Measurement\sys_measure_v0.0.1.c
   ```
   
 - Introduction
@@ -109,7 +109,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 - To directly run this program
 
-  ```
+  ```powershell
   \myworks\2. Python\1. Parser\3. Parser_PO_splitter\Executable Files\xls_split_v1.exe
   ```
 
@@ -245,7 +245,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 ## 3. JavaScript
 
-### [ Exhibition : Boundary Cap Holes ](https://piecetw.com/2022/09/19/boundary/?fbclid=IwAR1qgHL6bP7_Ffn5VePIJmDYM6bjwSLeaeklIdoFaxEpS_UjNNgStj7IbJ0)
+### Check the [ Exhibition : Boundary Cap Holes ](https://piecetw.com/2022/09/19/boundary/?fbclid=IwAR1qgHL6bP7_Ffn5VePIJmDYM6bjwSLeaeklIdoFaxEpS_UjNNgStj7IbJ0) here.
 
 #### [ Build #10 : Hand Control Version ]
 
