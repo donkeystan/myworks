@@ -8,34 +8,44 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 #### [ Build #1 : Garment Measurement Record Tool ]
 
-- To Compile this program
+- To directly run this program
 
-  ```powerhsell
-  cd \Stan_Project\1. C\Garment Measurement
-  gcc .\sys_measure_v0.0.1.c
+  ```
+  myworks\1. C\Garment Measurement\sys_measure_v0.0.1.exe
   ```
 
+- Source Code
+
+  ```powerhsell
+  cd .\myworks\1. C\Garment Measurement\Garment Measurement
+  ```
+  
 - Introduction
 
-  >This is my first project, I tried use C to make a simple input and then text record output program.
+  >This is my first project, I used C to make a simple input and then text record output program.
   > It's designed for a friend who runs a small uniform company.
-  > There is a concept self-made data-base using tree, and linked-list under construction.
 
 
 
 #### [ Build #2 : Grid Puzzle ]
-- Compile this program
 
-  ```powershell
-  cd \Stan_Project\1. C\Garment Measurement
-  gcc .\sys_measure_v0.0.1.c
+- To directly run this program
+
+  ```
+  myworks\1. C\Grid Puzzle\8-puzzle.exe
   ```
 
+- Source Code
+
+  ```powershell
+  myworks\1. C\Grid Puzzle\grid_puzzle_v1.0.c
+  ```
+  
 - Introduction
 
   >This is a small game built just for fun.
   >
-  >By updating the TILE and the BOARD_ROW_SIZE BOARD_COL_SIZE, the Grid Puzzle can be enlarged
+  >By updating the TILE and the BOARD_ROW_SIZE BOARD_COL_SIZE, the Grid Puzzle can be enlarged up to 9 x 9
 
 
 
@@ -45,15 +55,20 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 #### [ Build #3 : Inventory Generator ]
 
-- To run this script, go to the designated directory 
+- To directly run this program
 
-  ```powershell
-  cd \Stan_Project\2. Python\1. Parser\1. Parser_inventory_generator
-  python .\INV_GEN_V1.0.py
+  ```
+  myworks\2. Python\1. Parser\1. Parser_inventory_generator\Executable Files\INV_GEN_V1.0.exe
   ```
 
-  a new folder and a human readable report file will be generated.
+- Source Code
 
+  ```powershell
+  myworks\2. Python\1. Parser\1. Parser_inventory_generator\INV_GEN_V1.0.py
+  ```
+  
+  a new folder and a human readable report file will be generated.
+  
 - Introduction
 
   > Our company's ERP system does not generate a proper inventory report for staff's quick reference,
@@ -69,7 +84,7 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this script, go to the designated directory 
 
   ```powershell
-  \Stan_Project\2. Python\1. Parser\2. Parser_inventory_history_generator
+  myworks\2. Python\1. Parser\2. Parser_inventory_history_generator\Executable Files/PART_HX_WH_(MULTIPLE)_v1.py
   ```
 
   then open the PART_HX_WH_(MULTIPLE)_v1.py file with any IDE
@@ -92,19 +107,21 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 
 #### [ Build #5 : Purchase Order Splitter ]
 
-- To run this script, go to the designated directory 
+- To directly run this program
+
+  ```
+  \myworks\2. Python\1. Parser\3. Parser_PO_splitter\Executable Files\xls_split_v1.exe
+  ```
+
+- Source Code
 
   ```powershell
-  \Stan_Project\2. Python\1. Parser\3. Parser_PO_splitter
+  myworks\2. Python\1. Parser\3. Parser_PO_splitter\xls_split_v1.py
   ```
 
   make sure to change the customer [studio A]  PO's name to **in.XLSX**
 
   then run the python script file
-
-  ```powershell
-  python xls_split_v1.py
-  ```
 
 - Introduction
 
@@ -123,20 +140,20 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this system, go to the designated directory
 
   ```powershell
-  \Stan_Project\2. Python\2. Framework_Django\hf_uniform
+  myworks\2. Python\2. Framework_Django\hf_uniform
   ```
 
-  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+  - [x] To prevent error, it is recommended to run under virtual environment with **Django V3.2.3 installed**
 
   then run the following
 
   ```powershell
-  python manage.py runserver //a designated IP can be assigned to it
+  python manage.py runserver
   ```
 
   then in your web browser, type in http://127.0.0.1:8000 if no designated IP is given.
 
-  to login, a temp username: danielliu and password: hofo1981 can be used to test the system.
+  - [x] to login, a **temp username: danielliu** and **password: hofo1981** can be used to test the system.
 
 - Introduction
 
@@ -153,15 +170,15 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this system, go to the designated directory
 
   ```powershell
-  \Stan_Project\2. Python\2. Framework_Django\todo_list
+  myworks\2. Python\2. Framework_Django\todo_list
   ```
 
-  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+  - [x] To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
 
   then run the following
 
   ```powershell
-  python manage.py runserver //a designated IP can be assigned to it
+  python manage.py runserver
   ```
 
   then in your web browser, type in http://127.0.0.1:8000/todo/ if no designated IP is given.
@@ -177,24 +194,24 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this system, go to the designated directory
 
   ```powershell
-  \Stan_Project\2. Python\2. Framework_Django\notes
+  myworks\2. Python\2. Framework_Django\notes
   ```
 
-  To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
+  - [x] To prevent error, it is recommended to run under virtual environment with Django V3.2.3 installed
 
   then run the following
 
   ```powershell
-  python manage.py runserver //a designated IP can be assigned to it
+  python manage.py runserver
   ```
 
   then in your web browser, type in 127.0.0.1:8000 if no designated IP is given.
 
   to login, two temp users can be logged in to access individual's contents
 
-  user1: lynnpan password1: lynn123456
+  - [x] **user1: lynnpan password1: lynn123456**
 
-  user2: johnliu password2: john654321
+  - [x] **user2: johnliu password2: john654321**
 
 - Introduction
 
@@ -211,14 +228,14 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To see the Data Analysis, go to the directory
 
   ```powerhsell
-  \Stan_Project\2. Python\3. Data Analysis
+  myworks\2. Python\3. Data Analysis\NASA_near_earth_object.ipynb
   ```
 
   and open the NASA_near_earth_object.ipynb with VS Code with the extension
 
   or just click the following link to see a cloud version
 
-  [Read it on Google Colab](https://colab.research.google.com/drive/1XyY1iWnIHLGcU8yuEcRfzjqKq7sigpXW#scrollTo=67mAxAD78I6t)
+  - [x] **[Read it on Google Colab](https://colab.research.google.com/drive/1XyY1iWnIHLGcU8yuEcRfzjqKq7sigpXW#scrollTo=67mAxAD78I6t)**
 
 - Introduction
 
@@ -235,18 +252,18 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this web page, just go to the diretory
 
   ```powershell
-  \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\Hand_control\radom_exhibit_v3.3
+  myworks\3. JavaScript\BOUNDARY_CAP HOLES\Hand_control\radom_exhibit_v3.3
   ```
 
-  directly open up the file < rand.html > and then click only once anywhere on the page
+  - [x] directly **open up the file < rand.html >** and **then click only once anywhere on the page**
 
-  The PC used to run this page must have a web camera to activate the hand control
+  - [x] The PC used to run this page **must connect a web camera** to activate the hand control
 
 - Introduction
 
-  [Click to see how it's played ]( https://www.facebook.com/526624591/videos/1110140703223793/ )
+  - [x] **[Click to see how it's played ]( https://www.facebook.com/526624591/videos/1110140703223793/ )**
   
-  [Click to see how it's played](https://www.facebook.com/1375058317/videos/659041292242353/)
+  - [x] **[Click to see how it's played](https://www.facebook.com/1375058317/videos/659041292242353/)**
   
   > This web page is created for an Art Exhibition called "BOUNDARY_CAP HOLES" owned by my brother-in-law,
   >
@@ -263,10 +280,10 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this web page, just go to the diretory
 
   ```powershell
-  \Stan_Project\3. JavaScript\BOUNDARY_CAP HOLES\No_hand_control\radom_exhibit
+  myworks\3. JavaScript\BOUNDARY_CAP HOLES\No_hand_control\radom_exhibit
   ```
 
-  directly open up the file < rand.html > and then click only once anywhere on the page
+  - [x] directly **open up the file < rand.html >** and **then click only once anywhere on the page**
 
 - Introduction
 
@@ -283,16 +300,16 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run this web page, just go to the diretory
 
   ```powershell
-  Stan_Project\3. JavaScript\Garments_Input
+  myworks\3. JavaScript\Garments_Input
   ```
 
-  directly open up the file < measurement.html > and the page can be used to save temporary data
+  - [x] directly **open up the file < measurement.html >** and the page can be used to save temporary data 
 
 - Introduction
 
   > This is a single web page version for my friend's uniform workshop.
   >
-  > It's made to put in his laptop to prevent system failure, and he can use this page directly for record saving.
+  > It's made to put in his laptop to prevent system failure, and he can use this lightweight page directly for record saving.
 
 
 
@@ -303,12 +320,12 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run the Excel macro, go to the directory
 
   ```powershell
-  \Stan_Project\4. Excel_VBA Macro
+  myworks\4. Excel_VBA Macro
   ```
 
-  open < infinite_loop_v1.3.1.xlsm >  and the raw data < inventory.XLSX >
+  - [x] **open < infinite_loop_v1.3.1.xlsm >**  and the **raw data < inventory.XLSX >**
 
-  and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!inventory_check > macro
+  - [x] and in the **developer tab of  raw data < inventory.XLSX >**, chose macro and then **run < infinite_loop_v1.3.1.xlsm!inventory_check > macro**
 
 - Introduction
 
@@ -323,12 +340,12 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
 - To run the Excel macro, go to the directory
 
   ```powershell
-  \Stan_Project\4. Excel_VBA Macro
+  myworks\4. Excel_VBA Macro
   ```
 
-  open < infinite_loop_v1.3.1.xlsm >  and the raw data < sales record_0220.XLSX >
+  - [x] **open < infinite_loop_v1.3.1.xlsm >**  and the **raw data < sales record_0220.XLSX >**
 
-  and in the developer tab, chose macro and then run < infinite_loop_v1.3.1.xlsm!sales_check > macro
+  - [x] and in the **developer tab of raw data < sales record_0220.XLSX >**, chose macro and then **run < infinite_loop_v1.3.1.xlsm!sales_check > macro**
 
 - Introduction
 
@@ -356,7 +373,9 @@ Hi, I'm Stan. I have been learning programming on my own for almost two years, a
     > Same as above, I made these parts on my own for my company's new product EDM making.
     
 
-​				
+- [x] **Must use Pro/E or Solid Work to open the <.prt> files**
+
+
 
 #### [ Build #16 : Keyshot ]
 

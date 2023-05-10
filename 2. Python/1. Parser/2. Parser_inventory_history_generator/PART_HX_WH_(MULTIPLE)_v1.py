@@ -102,19 +102,21 @@ def get_file(warehouse, part_no):
     out_workbook = Workbook()
     out_workwheet = out_workbook.active
     out_workwheet.title = 'HX_'+part_no
-
+    
     # receives the filelist in the folder
     file_list = get_file_list()
     print(f'File Lists: {file_list}\n<---------- READ FILE CORRECCT ---------->')
-
     header = [ 'No', 'Date', 'Part No']
     header.extend(warehouse)
     out_workwheet.append(header)
-
-    # loop in to get data and append in worksheet
-    for wb_name in file_list:
-        tmp_list = get_data(wb_name, warehouse, part_no)
-        out_workwheet.append(tmp_list)
+    
+    try :
+        # loop in to get data and append in worksheet
+        for wb_name in file_list:
+            tmp_list = get_data(wb_name, warehouse, part_no)
+            out_workwheet.append(tmp_list)
+    except :
+        print("< --- Fail to Read Any File --- >")
 
     return out_workbook
 
@@ -161,21 +163,14 @@ def portal(warehouse, part_no, folder):
     NO = 0
 
     path = os.getcwd()
-    out_workbook = get_file(warehouse,part_no)
+    out_workbook = get_file(warehouse, part_no)
     filename = path + folder + "\HX_"+part_no+'.xlsx'
     out_workbook.save(filename)
 
 def main():
-    # warehouse = str(input("enter 倉別名稱: "))
-    # part_no = str(input("請輸入料號: "))
-
     wh_list = ['內湖倉','信義倉','待整新倉','配貨倉','國際倉']
-    # part_list = ['CWC015ZZW401', 'CWC015ZZW101', 'CSW004NEC21F', 'CSW002CEC23F', '01C010ZZA001', 'CAM200BM221F', 'CAC200ZZU108', 'CAC200ZZC308', 'CAC2004CC110', 'CAC180BMHD2F', 'CAC120ZZU108', 'CAC120ZZC308', 'HBC001ZZS106', 'PBU10KLPM505', 'PBU10KLPM005', 'PBP10KLPC505', 'PBP10KLPC005', 'PBP10KAPC305', 'PBF10KPI22DF', 'CAL180ZZU504', 'CAL180ZZU104', 'CAL180ZZC104', 'CAL180TPC304', 'CAL180TPC104', 'CAL150BM121F', 'CAL120ZZC104', 'CAL120TPC304', 'CAL120TPC104', 'CAL100ZZU504', 'CAL100ZZU104', 'HCM009APWW2F', 'HCM006APWW2F', 'HCM005APWW2F', 'HCM004APWW2F', 'HBC011ZZC206', 'HBC011ENC206', 'HBC011ARC206', 'HBC008ZZC201', 'HBC008JGC106', 'HBC007JGC106', 'HBC006JGC106', 'HBC005ZZC106', 'CAH500BMH41F', 'CAH300BMH81F', 'CAH300BMH41F', 'CAH200BMH81F', 'CAH200BMH41F', 'CADP300M141F', 'CADP180M141F', 'CAE500TPC87F', 'CAE300TPC87F', 'PKL120USA309', 'P2118TCL30US', 'P2115TCL20US', 'P2115TCL20EU', 'P3112TC266S3', 'CP4100TEMB1F', 'CP4100TEJP1F', 'CMP030ELUS3F', 'CMP030ELEU3F', 'CHP075ZZC307', 'CHP075USC307', 'CHP030ZZK307', 'CHP030ZZA304', 'CHP018USC307', 'WCMF68ELA21F', 'WCAF75ELA21F']
-    # part_list = ['CWC015ZZW401']
-    part_list =['HCM006APWW2F', 'HCM005APWW2F', 'HCM004APWW2F']
-
+    part_list = ['HCM009APWW2F', 'HCM006APWW2F', 'HCM005APWW2F', 'HCM004APWW2F', 'HBC011ZZC206', 'HBC011ENC206', 'HBC011ARC206', 'HBC008ZZC201', 'HBC008JGC106', 'HBC007JGC106', 'HBC006JGC106', 'HBC005ZZC106']
     folder = create_folder()
-
     for part_no in part_list:
         portal(wh_list, part_no, folder)
 
